@@ -1,0 +1,252 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+.bloc_left_price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+}
+.category_block li:hover {
+    background-color: #007bff;
+}
+.category_block li:hover a {
+    color: #ffffff;
+}
+.category_block li a {
+    color: #343a40;
+}
+.add_to_cart_block .price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    margin-bottom: 0;
+}
+.add_to_cart_block .price_discounted {
+    color: #343a40;
+    text-align: center;
+    text-decoration: line-through;
+    font-size: 140%;
+}
+.product_rassurance {
+    padding: 10px;
+    margin-top: 15px;
+    background: #ffffff;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+}
+.product_rassurance .list-inline {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.product_rassurance .list-inline li:hover {
+    color: #343a40;
+}
+.reviews_product .fa-star {
+    color: gold;
+}
+.pagination {
+    margin-top: 20px;
+}
+footer {
+    background: #343a40;
+    padding: 40px;
+}
+footer a {
+    color: #f8f9fa!important
+}
+
+{% endblock %}
+{% block body %}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="">SAB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'myfun' %}">Back</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'popular' %}">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-secondary btn-number">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <a class="btn btn-success btn-sm ml-3" href="cart.html">
+                    <i class="fa fa-shopping-cart"></i> Cart
+                    <span class="badge badge-light">3</span>
+                </a>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'all' %}">Category</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Sub-category</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-3">
+            <div class="card bg-light mb-3">
+                <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categories</div>
+                <ul class="list-group category_block">
+                    <li class="list-group-item"><a href="{% url 'womens' %}">Womens Fashion</a></li>
+                    <li class="list-group-item"><a href="{% url 'mens' %}">Mens Fashion</a></li>
+                    <li class="list-group-item"><a href="{% url 'kids' %}">Kids</a></li>
+                    <li class="list-group-item"><a href="{% url 'electronics' %}">Electronics & Appliances</a></li>
+                    <li class="list-group-item"><a href="{% url 'car1' %}">Cars</a></li>
+                    <li class="list-group-item"><a href="{% url 'furniture' %}">Furniture</a></li>
+                    <li class="list-group-item"><a href="{% url 'camera' %}">Camera</a></li>
+                    <li class="list-group-item"><a href="{% url 'shoes' %}">Shoes</a></li>
+                    <li class="list-group-item"><a href="{% url 'bike' %}">Bikes</a></li>
+                </ul>
+            </div>
+            <div class="card bg-light mb-3">
+                <div class="card-header bg-success text-white text-uppercase">Last product</div>
+                <div class="card-body">
+                    <img class="img-fluid" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/the-bugatti-chiron-is-shown-to-the-goodwood-festival-of-news-photo-1600106522.jpg">
+                    <h5 class="card-title">Luxury Car</h5>
+                    <p class="card-text">Enjoy luxury Ride with Luxury Car</p>
+                    <p class="bloc_left_price">999.0 $</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://i.pinimg.com/originals/3a/e5/dd/3ae5ddd22f603bd1ab54e13236e29e49.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="product.html" title="View Product">ROYAL ENFIELD</a></h4>
+                            <p class="card-text">Engine:350cc ,Bullet that feel you like a king.</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger btn-block">599.0 $</p>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://content3.jdmagicbox.com/comp/lucknow/s8/0522px522.x522.190419200406.l4s8/catalogue/ganpati-furniture-vikas-nagar-lucknow-lucknow-furniture-dealers-aekoa3mv5e.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="product.html" title="View Product">MODULAR FURNITURE</a></h4>
+                            <p class="card-text">Furniture that Comforts you</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger btn-block">199.0 $</p>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/41k3b4BzSJL._SX355_.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="product.html" title="View Product">MAKEUP IT</a></h4>
+                            <p class="card-text">Branded Makeup for your Beautiful Skin,</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://i.pinimg.com/236x/57/16/3b/57163b072a604cd6b1dc973176290a3a.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="product.html" title="View Product">WOMEN DRESS</a></h4>
+                            <p class="card-text">Latest Design that you like to Wear .</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger btn-block">49.00 $</p>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://i.pinimg.com/736x/9a/c6/3e/9ac63e578cc816891de9d5a3bde49f1c.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="product.html" title="View Product">KIDS FANCY DRESS</a></h4>
+                            <p class="card-text">Special for Your Cutest Little One.</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger btn-block">39.00 $</p>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://i.pinimg.com/originals/26/e8/bc/26e8bc17bb78dc68de381b8308717a32.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="product.html" title="View Product">TRENDY FASHION</a></h4>
+                            <p class="card-text">Fashion forever that makes you fell Comfortable. </p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+{% endblock %}

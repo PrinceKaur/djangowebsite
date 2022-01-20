@@ -1,0 +1,555 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+button:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+.box{
+    margin:5rem 0 15rem;
+}
+.heading{
+     text-align: center;
+    position: relative;
+    font-size: 3.3rem;
+    font-weight: bold;
+    margin: 3rem 0;
+    
+}
+.box figure {
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  position: relative;
+}
+
+.box figure img {
+  height: 223px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.box figure figcaption {
+  position: absolute;
+  bottom: -50px;
+  left: 8%;
+  right: 8%;
+  background: #fff;
+  color: #000;
+  padding: 20px 15px;
+  -webkit-box-shadow: 0 5px 10px #00000033;
+          box-shadow: 0 5px 10px #00000033;
+  -webkit-transition: .5s all;
+  transition: .5s all;
+}
+
+.box figure figcaption::after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  height: 2px;
+  background: #fc5546;
+  content: '';
+  width: 0;
+  position: absolute;
+  -webkit-transition: .5s all;
+  transition: .5s all;
+}
+
+.box figure figcaption h5 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.box figure figcaption h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+
+.box figure:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.box figure:hover h5 {
+  color: #fc5546;
+}
+
+.box figure:hover img {
+  -webkit-box-shadow: 0px 0px 6px #0000004f, -10px -10px 1px #f97955;
+          box-shadow: 0px 0px 6px #0000004f, -10px -10px 1px #f97955;
+}
+
+.box2 figure:hover figcaption {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  -webkit-box-shadow: 0 10px 10px #0000004f;
+          box-shadow: 0 10px 10px #0000004f;
+}
+
+.box figure:hover figcaption::after {
+  width: 100%;
+}
+.box h3 {
+  font-size: 3rem;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 4rem;
+}
+
+.box p {
+  font-size: 2rem;
+  font-family: "helveticaregular";
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/*extra*/
+/* FontAwesome for working BootSnippet :> */
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#team {
+    background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007b5e;
+    border-color: #007b5e;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+/*extra2*/
+ body { color: #ccc }
+.footer-widget p {
+    margin-bottom: 27px;
+}
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+   .animate-border {
+  position: relative;
+  display: block;
+  width: 115px;
+  height: 3px;
+  background: #007bff; }
+
+.animate-border:after {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+  -webkit-animation: animborder 2s linear infinite;
+  animation: animborder 2s linear infinite; }
+
+@-webkit-keyframes animborder {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(113px);
+    transform: translateX(113px); } }
+
+@keyframes animborder {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(113px);
+    transform: translateX(113px); } }
+
+.animate-border.border-white:after {
+  border-color: #fff; }
+
+.animate-border.border-yellow:after {
+  border-color: #F5B02E; }
+
+.animate-border.border-orange:after {
+  border-right-color: #007bff;
+  border-left-color: #007bff; }
+
+.animate-border.border-ash:after {
+  border-right-color: #EEF0EF;
+  border-left-color: #EEF0EF; }
+
+.animate-border.border-offwhite:after {
+  border-right-color: #F7F9F8;
+  border-left-color: #F7F9F8; }
+
+/* Animated heading border */
+@keyframes primary-short {
+  0% {
+    width: 15%; }
+  50% {
+    width: 90%; }
+  100% {
+    width: 10%; } }
+
+@keyframes primary-long {
+  0% {
+    width: 80%; }
+  50% {
+    width: 0%; }
+  100% {
+    width: 80%; } } 
+    #hi{background-color: pink;}
+{% endblock %}
+{% block body %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact1' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+
+<div class="box">
+                <div class="container">
+                    <h2 class="heading">Cycles For Healthy Life!</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="https://www.firefoxbikes.com/media/wysiwyg/smartwave/category/City.jpg" alt="img1">
+                                <figcaption>
+                                    <h5>FireFox Cycle</h5>
+                                    <h3>$60<br>For Children</h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="https://images.jdmagicbox.com/quickquotes/images_main/b07dz23pdv-r-cycles-fat-tyre-prime-adventure-sports-mtb-cycle-with-21-shimano-gears-fat-boy-146670141-glvzh.jpg" alt="img1">
+                                <figcaption>
+                                    <h5>Mtb Cycle</h5>
+                                    <h3>$150<br>For Adventure Sports</h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="https://rukminim1.flixcart.com/image/416/416/cycle/z/x/g/26t-hero-21-dtb-18-speed-original-imaejxndgarfbhbz.jpeg" alt="img1">
+                                <figcaption>
+                                    <h5>Hero Cycle</h5>
+                                    <h3>$70<br>Mountain Cycle</h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+<!-- extra -->
+<!-- Team -->
+<section id="team" class="pb-5">
+    <div class="container">
+        <h5 class="section-title h1"><u>OUR Latest Collection</h5>
+        </u>
+        <div class="row">
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" >
+                    <div class="mainflip flip-0">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="https://images-na.ssl-images-amazon.com/images/I/61RZ2z0dEbL._AC_SX425_.jpg" alt="card image"></p>
+                                    <h4 class="card-title">R Prime Cycle</h4>
+                                    <p class="card-text">R cycle 26T 21 Speed</p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">R Prime Cycle</h4>
+                                    <p class="card-text">R cycle 26T 21 Speed<br><br>BUY NOW </p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                             <h4>   <i class="fa fa-cart-arrow-down"></i></h4>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                             <h4>   <i class="fa fa-heart"></i></h4>
+                                            </a>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="https://n4.sdlcdn.com/imgs/h/l/v/BMW-Foldable-Adventure-Sports-MTB-SDL420400942-1-c511f.jpeg" alt="card image"></p>
+                                    <h4 class="card-title">BMW Cycle</h4>
+                                    <p class="card-text">Adventure Sports Mtb cycle with gear.</p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">BMW Cycle</h4>
+                                    <p class="card-text">Adventure Sports Mtb cycle with gear.
+                                    <br><br>BUY NOW </p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-cart-arrow-down"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="https://www.carbodydesign.com/media/2012/05/03-Audi-e-bike-Worthersee-Concept-01-720x540.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Nissan Cycle</h4>
+                                    <p class="card-text">Audi bike,Latest Model,High Speed.</p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Nissan Cycle</h4>
+                                    <p class="card-text">Audi bike,Latest Model,High Speed.<br><br>BUY NOW </p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fas fa fa-cart-arrow-down"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fas fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            
+        </div>
+    </div>
+</section>
+<!-- Team -->
+{% endblock %}

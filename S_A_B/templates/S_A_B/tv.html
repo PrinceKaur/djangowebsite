@@ -1,0 +1,240 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+.box
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+.card
+{
+    margin-top: 80px;
+    height: 300px;
+    transition: 0.5s;
+}
+.card:hover
+{
+    border: 1px solid red;
+    border-radius: 30px;
+}
+.card .cardImg
+{
+    height: 150px;
+    width: 90%;
+    position: relative;
+    top: -15px;
+    left: 5%;
+}
+.card .cardImg img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.card .info
+{
+    text-align: center;
+}
+.card .info h3
+{
+    color: rgb(70, 66, 66);
+}
+.card .info p
+{
+    color: rgb(41, 201, 49);
+}
+
+.ligne
+{
+    display: flex;
+}
+#hi{background-color: pink;}
+{% endblock %}
+{% block body %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+
+<h2 class="text-center text-success"><u>Smart Televisions For You Entertainment</h2></u>
+ <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://www.lg.com/in/images/tvs/md06140496/gallery/01-1100-V01-29072019-v1.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>LG SMART TV</h3>
+                        <p><span>$</span>756</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81z-Ir0qCFL._SX355_.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>SONY TV</h3>
+                        <p><span>$</span>685</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="http://cdn.mos.cms.futurecdn.net/veAPZcNtVSKLBufEmSn69K.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>MI TV</h3>
+                        <p><span>$</span>572</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://images.news18.com/ibnlive/uploads/2019/10/TCL-40S62FS-40-inch-full-HD-smart-TV.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>AIRTEL XSTREME</h3>
+                        <p><span>$</span>749</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2020/12/infinix-smart-tv-1607965920.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>ONEPLUS TV</h3>
+                        <p><span>$</span>653</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://micromaxinfo.com/pub/media/catalog/category/Smart-TV_Banner_1.png" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>SAMSUNG TV</h3>
+                        <p><span>$</span>679</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://www.bajajfinservmarkets.in/emistore/media/catalog/product/3/2/32n4200_additional1.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>PHILIPS</h3>
+                        <p><span>$</span>732</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://spy.com/wp-content/uploads/2019/12/curved-tv-samsung.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>SONY BRAVIA</h3>
+                        <p><span>$</span>757</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://d16pnh712pyiwa.cloudfront.net/wp-content/uploads/2020/02/Image_TV.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>VU 164CM</h3>
+                        <p><span>$</span>648</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://i.pcmag.com/imagery/reviews/05Rc8HIfmGxBSjNQy6qpobV-1.1621265628.fit_lpad.size_625x365.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>TE40A SMART TV</h3>
+                        <p><span>$</span>735</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://cdn1.expertreviews.co.uk/sites/expertreviews/files/styles/er_main_wide/public/2020/03/best_smart_tv_expert_reviews.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>EAIRTEC 81CM</h3>
+                        <p><span>$</span>695</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://i.pinimg.com/originals/bb/9b/af/bb9bafd49f6316496ab08f4a6e2c74fa.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>REDMI TV</h3>
+                        <p><span>$</span>686</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            </div></div>
+{% endblock %}

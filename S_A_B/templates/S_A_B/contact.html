@@ -1,0 +1,1013 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+button:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+.box{
+    margin:5rem 0 15rem;
+}
+.heading{
+     text-align: center;
+    position: relative;
+    font-size: 3.3rem;
+    font-weight: bold;
+    margin: 3rem 0;
+    
+}
+.box figure {
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  position: relative;
+}
+
+.box figure img {
+  height: 223px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.box figure figcaption {
+  position: absolute;
+  bottom: -50px;
+  left: 8%;
+  right: 8%;
+  background: #fff;
+  color: #000;
+  padding: 20px 15px;
+  -webkit-box-shadow: 0 5px 10px #00000033;
+          box-shadow: 0 5px 10px #00000033;
+  -webkit-transition: .5s all;
+  transition: .5s all;
+}
+
+.box figure figcaption::after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  height: 2px;
+  background: #fc5546;
+  content: '';
+  width: 0;
+  position: absolute;
+  -webkit-transition: .5s all;
+  transition: .5s all;
+}
+
+.box figure figcaption h5 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.box figure figcaption h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+
+.box figure:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.box figure:hover h5 {
+  color: #fc5546;
+}
+
+.box figure:hover img {
+  -webkit-box-shadow: 0px 0px 6px #0000004f, -10px -10px 1px #f97955;
+          box-shadow: 0px 0px 6px #0000004f, -10px -10px 1px #f97955;
+}
+
+.box2 figure:hover figcaption {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  -webkit-box-shadow: 0 10px 10px #0000004f;
+          box-shadow: 0 10px 10px #0000004f;
+}
+
+.box figure:hover figcaption::after {
+  width: 100%;
+}
+.box h3 {
+  font-size: 3rem;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 4rem;
+}
+
+.box p {
+  font-size: 2rem;
+  font-family: "helveticaregular";
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/*extra*/
+/* FontAwesome for working BootSnippet :> */
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#team {
+    background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007b5e;
+    border-color: #007b5e;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+/*extra2*/
+ body { color: #ccc }
+.footer-widget p {
+    margin-bottom: 27px;
+}
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+   .animate-border {
+  position: relative;
+  display: block;
+  width: 115px;
+  height: 3px;
+  background: #007bff; }
+
+.animate-border:after {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+  -webkit-animation: animborder 2s linear infinite;
+  animation: animborder 2s linear infinite; }
+
+@-webkit-keyframes animborder {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(113px);
+    transform: translateX(113px); } }
+
+@keyframes animborder {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(113px);
+    transform: translateX(113px); } }
+
+.animate-border.border-white:after {
+  border-color: #fff; }
+
+.animate-border.border-yellow:after {
+  border-color: #F5B02E; }
+
+.animate-border.border-orange:after {
+  border-right-color: #007bff;
+  border-left-color: #007bff; }
+
+.animate-border.border-ash:after {
+  border-right-color: #EEF0EF;
+  border-left-color: #EEF0EF; }
+
+.animate-border.border-offwhite:after {
+  border-right-color: #F7F9F8;
+  border-left-color: #F7F9F8; }
+
+/* Animated heading border */
+@keyframes primary-short {
+  0% {
+    width: 15%; }
+  50% {
+    width: 90%; }
+  100% {
+    width: 10%; } }
+
+@keyframes primary-long {
+  0% {
+    width: 80%; }
+  50% {
+    width: 0%; }
+  100% {
+    width: 80%; } } 
+
+.dk-footer {
+  padding: 75px 0 0;
+  background-color: #151414;
+  position: relative;
+  z-index: 2; }
+  .dk-footer .contact-us {
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-left: 80px; }
+    .dk-footer .contact-us .contact-info {
+      margin-left: 50px; }
+    .dk-footer .contact-us.contact-us-last {
+      margin-left: -80px; }
+  .dk-footer .contact-icon i {
+    font-size: 24px;
+    top: -15px;
+    position: relative;
+    color:#007bff; }
+
+.dk-footer-box-info {
+  position: absolute;
+  top: -122px;
+  background: #202020;
+  padding: 40px;
+  z-index: 2; }
+  .dk-footer-box-info .footer-social-link h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 25px; }
+  .dk-footer-box-info .footer-social-link ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+  .dk-footer-box-info .footer-social-link li {
+    display: inline-block; }
+  .dk-footer-box-info .footer-social-link a i {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    background: #000;
+    margin-right: 5px;
+    color: #fff; }
+    .dk-footer-box-info .footer-social-link a i.fa-facebook {
+      background-color: #3B5998; }
+    .dk-footer-box-info .footer-social-link a i.fa-twitter {
+      background-color: #55ACEE; }
+    .dk-footer-box-info .footer-social-link a i.fa-google-plus {
+      background-color: #DD4B39; }
+    .dk-footer-box-info .footer-social-link a i.fa-linkedin {
+      background-color: #0976B4; }
+    .dk-footer-box-info .footer-social-link a i.fa-instagram {
+      background-color: #B7242A; }
+
+.footer-awarad {
+  margin-top: 285px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -moz-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .footer-awarad p {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 20px;
+    padding-top: 15px; }
+
+.footer-info-text {
+  margin: 26px 0 32px; }
+
+.footer-left-widget {
+  padding-left: 80px; }
+
+.footer-widget .section-heading {
+  margin-bottom: 35px; }
+
+.footer-widget h3 {
+  font-size: 24px;
+  color: #fff;
+  position: relative;
+  margin-bottom: 15px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content; }
+
+.footer-widget ul {
+  width: 50%;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.footer-widget li {
+  margin-bottom: 18px; }
+
+.footer-widget p {
+  margin-bottom: 27px; }
+
+.footer-widget a {
+  color: #878787;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  .footer-widget a:hover {
+    color: #007bff; }
+
+.footer-widget:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.dk-footer-form {
+  position: relative; }
+  .dk-footer-form input[type=email] {
+    padding: 14px 28px;
+    border-radius: 50px;
+    background: #2E2E2E;
+    border: 1px solid #2E2E2E; }
+  .dk-footer-form input::-webkit-input-placeholder, .dk-footer-form input::-moz-placeholder, .dk-footer-form input:-ms-input-placeholder, .dk-footer-form input::-ms-input-placeholder, .dk-footer-form input::-webkit-input-placeholder {
+    color: #878787;
+    font-size: 14px; }
+  .dk-footer-form input::-webkit-input-placeholder, .dk-footer-form input::-moz-placeholder, .dk-footer-form input:-ms-input-placeholder, .dk-footer-form input::-ms-input-placeholder, .dk-footer-form input::placeholder {
+    color: #878787;
+    font-size: 14px; }
+  .dk-footer-form button[type=submit] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 24px 12px 17px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 1px solid #007bff;
+    background: #007bff;
+    color: #fff; }
+  .dk-footer-form button:hover {
+    cursor: pointer; }
+
+/* ==========================
+
+    Contact
+
+=============================*/
+.contact-us {
+  position: relative;
+  z-index: 2;
+  margin-top: 65px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.contact-icon {
+  position: absolute; }
+  .contact-icon i {
+    font-size: 36px;
+    top: -5px;
+    position: relative;
+    color: #007bff; }
+
+.contact-info {
+  margin-left: 75px;
+  color: #fff; }
+  .contact-info h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 0; }
+
+.copyright {
+  padding: 28px 0;
+  margin-top: 55px;
+  background-color: #202020; }
+  .copyright span,
+  .copyright a {
+    color: #878787;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+  .copyright a:hover {
+    color:#007bff; }
+
+.copyright-menu ul {
+  text-align: right;
+  margin: 0; }
+
+.copyright-menu li {
+  display: inline-block;
+  padding-left: 20px; }
+
+.back-to-top {
+  position: relative;
+  z-index: 2; }
+  .back-to-top .btn-dark {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2e2e2e;
+    border-color: #2e2e2e;
+    display: none;
+    z-index: 999;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+    .back-to-top .btn-dark:hover {
+      cursor: pointer;
+      background: #FA6742;
+      border-color: #FA6742; }
+      #hi{background-color: pink;}
+{% endblock %}
+{% block body %}
+{% load static %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact1' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+<div class="box">
+                <div class="container">
+                    <h2 class="heading">Contact Us</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="https://img.etimg.com/thumb/msid-62400436,width-640,resizemode-4,imgsize-285859/more-likely-to-use-mobile-apps-for-research.jpg" alt="img1">
+                                <figcaption>
+                                    <h5>Our Services</h5>
+                                    <h3>How We Can Help</h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-1361096,resizemode-1,msid-71577875/wealth/spend/8-ways-to-bag-better-deals-while-shopping-online/online-shopping-getty-12.jpg" alt="img1">
+                                <figcaption>
+                                    <h5>Our Expertise</h5>
+                                    <h3>Why Partners with us</h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="https://images.theconversation.com/files/351878/original/file-20200810-22-przb4a.jpg" alt="img1">
+                                <figcaption>
+                                    <h5>Our customers</h5>
+                                    <h3>Client success Stories</h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+<!-- extra -->
+<!-- Team -->
+<section id="team" class="pb-5">
+    <div class="container">
+        <h5 class="section-title h1">OUR TEAM</h5>
+        <div class="row">
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" >
+                    <div class="mainflip flip-0">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="{% static 'C:\Users\ankur saini\AppData\Local\Programs\Python\Python39\PROJECT\project\SAB\S_A_B\static\image\paras.jpeg' %}" alt="card image"></p>
+                                    <h4 class="card-title">Paras</h4>
+                                    <p class="card-text">Contact Any Time For Queries,Qualification Msc(it)</p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Paras</h4>
+                                    <p class="card-text">She is well Qualified to solve your technical issues.Contact her on social
+                                    networning site or direct message for any problem or queries regarding payments,selling,
+                                    purchasing of products.Our Team always ready to help you. </p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="{% static 'C:\Users\ankur saini\AppData\Local\Programs\Python\Python39\PROJECT\project\SAB\S_A_B\static\image\simran.jpeg' %}" alt="card image"></p>
+                                    <h4 class="card-title">Simran</h4>
+                                    <p class="card-text">Contact Any Time For Queries,Qualification Msc(it)</p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Simran</h4>
+                                    <p class="card-text">She is well Qualified to solve your technical issues.Contact her on social
+                                    networning site or direct message for any problem or queries regarding payments,selling,
+                                    purchasing of products.Our Team always ready to help you. </p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="{% static 'C:\Users\ankur saini\AppData\Local\Programs\Python\Python39\PROJECT\project\SAB\S_A_B\static\image\pri.jpg' %}" alt="card image"></p>
+                                    <h4 class="card-title">Prince</h4>
+                                    <p class="card-text">Contact Any Time For Queries,Qualification Msc(it)</p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Prince</h4>
+                                    <p class="card-text">She is well Qualified to solve your technical issues.Contact her on social
+                                    networning site or direct message for any problem or queries regarding payments,selling,
+                                    purchasing of products.Our Team always ready to help you. </p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            
+        </div>
+    </div>
+</section>
+<!-- Team -->
+<footer id="dk-footer" class="dk-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <div class="dk-footer-box-info">
+                        <a href="index.html" class="footer-logo">
+                            <img src="https://image.freepik.com/free-vector/customer-shopping-online-during-covid-19-stay-home-avoid-spreading-coronavirus_40876-1720.jpg" alt="footer_logo" class="img-fluid">
+                        </a>
+                        <p class="footer-info-text">
+                           Enjoy Online Selling And Buying Products.
+                        </p>
+                        <div class="footer-social-link">
+                            <h3>Follow us</h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Social link -->
+                    </div>
+                    <!-- End Footer info -->
+                    <div class="footer-awarad">
+                        <img src="images/icon/best.png" alt="">
+                        <p>Best Ecommerce Company </p>
+                    </div>
+                </div>
+                <!-- End Col -->
+                <div class="col-md-12 col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="contact-us">
+                                <div class="contact-icon">
+                                    <i class="fa fa-map-o" aria-hidden="true"></i>
+                                </div>
+                                <!-- End contact Icon -->
+                                <div class="contact-info">
+                                    <h3>Chandigarh,India</h3>
+                                    <p>Sco:118-120 ,Sec-34</p>
+                                </div>
+                                <!-- End Contact Info -->
+                            </div>
+                            <!-- End Contact Us -->
+                        </div>
+                        <!-- End Col -->
+                        <div class="col-md-6">
+                            <div class="contact-us contact-us-last">
+                                <div class="contact-icon">
+                                    <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                                </div>
+                                <!-- End contact Icon -->
+                                <div class="contact-info">
+                                    <h3>95 711 9 5353</h3>
+                                    <p>Give us a call</p>
+                                </div>
+                                <!-- End Contact Info -->
+                            </div>
+                            <!-- End Contact Us -->
+                        </div>
+                        <!-- End Col -->
+                    </div>
+                    <!-- End Contact Row -->
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="footer-widget footer-left-widget">
+                                <div class="section-heading">
+                                    <h3>Useful Links</h3>
+                                    <span class="animate-border border-black"></span>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="{% url 'abouts' %}">About us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Our Team</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="#">Contact us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Faq</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Footer Widget -->
+                        </div>
+                        <!-- End col -->
+                        <div class="col-md-12 col-lg-6">
+                            <div class="footer-widget">
+                                <div class="section-heading">
+                                    <h3>Subscribe</h3>
+                                    <span class="animate-border border-black"></span>
+                                </div>
+                                <p><!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+                                Reference site about Ecommerce, giving information on its origins, as well.</p>
+                                <form action="#">
+                                    <div class="form-row">
+                                        <div class="col dk-footer-form">
+                                            <input type="email" class="form-control" placeholder="Email Address">
+                                            <button type="submit">
+                                                <i class="fa fa-send"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- End form -->
+                            </div>
+                            <!-- End footer widget -->
+                        </div>
+                        <!-- End Col -->
+                    </div>
+                    <!-- End Row -->
+                </div>
+                <!-- End Col -->
+            </div>
+            <!-- End Widget Row -->
+        </div>
+        <!-- End Contact Container -->
+
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span>Copyright © 2019, All Right Reserved Seobin</span>
+                    </div>
+                    <!-- End Col -->
+                    <div class="col-md-6">
+                        <div class="copyright-menu">
+                            <ul>
+                                <li>
+                                    <a href="{% url 'home' %}">Home</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'abouts' %}">About</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'contact' %}">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                </div>
+                <!-- End Row -->
+            </div>
+            <!-- End Copyright Container -->
+        </div>
+        <!-- End Copyright -->
+        <!-- Back to top -->
+        <div id="back-to-top" class="back-to-top">
+            <button class="btn btn-dark" title="Back to Top" style="display: block;">
+                <i class="fas fa fa-angle-up"></i>
+            </button>
+        </div>
+        <!-- End Back to top -->
+</footer>
+{% endblock %}

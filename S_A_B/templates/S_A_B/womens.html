@@ -1,0 +1,423 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
+
+
+/********************* Shopping Demo-2 **********************/
+.demo{padding:45px 0}
+.product-grid2{font-family:'Open Sans',sans-serif;position:relative}
+.product-grid2 .product-image2{overflow:hidden;position:relative}
+.product-grid2 .product-image2 a{display:block}
+.product-grid2 .product-image2 img{width:100%;height:auto}
+.product-image2 .pic-1{opacity:1;transition:all .5s}
+.product-grid2:hover .product-image2 .pic-1{opacity:0}
+.product-image2 .pic-2{width:100%;height:100%;opacity:0;position:absolute;top:0;left:0;transition:all .5s}
+.product-grid2:hover .product-image2 .pic-2{opacity:1}
+.product-grid2 .social{padding:0;margin:0;position:absolute;bottom:50px;right:25px;z-index:1}
+.product-grid2 .social li{margin:0 0 10px;display:block;transform:translateX(100px);transition:all .5s}
+.product-grid2:hover .social li{transform:translateX(0)}
+.product-grid2:hover .social li:nth-child(2){transition-delay:.15s}
+.product-grid2:hover .social li:nth-child(3){transition-delay:.25s}
+.product-grid2 .social li a{color:#505050;background-color:#fff;font-size:17px;line-height:45px;text-align:center;height:45px;width:45px;border-radius:50%;display:block;transition:all .3s ease 0s}
+.product-grid2 .social li a:hover{color:#fff;background-color:#3498db;box-shadow:0 0 10px rgba(0,0,0,.5)}
+.product-grid2 .social li a:after,.product-grid2 .social li a:before{content:attr(data-tip);color:#fff;background-color:#000;font-size:12px;line-height:22px;border-radius:3px;padding:0 5px;white-space:nowrap;opacity:0;transform:translateX(-50%);position:absolute;left:50%;top:-30px}
+.product-grid2 .social li a:after{content:'';height:15px;width:15px;border-radius:0;transform:translateX(-50%) rotate(45deg);top:-22px;z-index:-1}
+.product-grid2 .social li a:hover:after,.product-grid2 .social li a:hover:before{opacity:1}
+.product-grid2 .add-to-cart{color:#fff;background-color:#404040;font-size:15px;text-align:center;width:100%;padding:10px 0;display:block;position:absolute;left:0;bottom:-100%;transition:all .3s}
+.product-grid2 .add-to-cart:hover{background-color:#3498db;text-decoration:none}
+.product-grid2:hover .add-to-cart{bottom:0}
+.product-grid2 .product-new-label{background-color:#3498db;color:#fff;font-size:17px;padding:5px 10px;position:absolute;right:0;top:0;transition:all .3s}
+.product-grid2:hover .product-new-label{opacity:0}
+.product-grid2 .product-content{padding:20px 10px;text-align:center}
+.product-grid2 .title{font-size:17px;margin:0 0 7px}
+.product-grid2 .title a{color:#303030}
+.product-grid2 .title a:hover{color:#3498db}
+.product-grid2 .price{color:#303030;font-size:15px}
+@media screen and (max-width:990px){.product-grid2{margin-bottom:30px}
+}
+
+/
+
+/********************* Shopping Demo-4 **********************/
+.product-grid4,.product-grid4 .product-image4{position:relative}
+.product-grid4{font-family:Poppins,sans-serif;text-align:center;border-radius:5px;overflow:hidden;z-index:1;transition:all .3s ease 0s}
+.product-grid4:hover{box-shadow:0 0 10px rgba(0,0,0,.2)}
+.product-grid4 .product-image4 a{display:block}
+.product-grid4 .product-image4 img{width:100%;height:auto}
+.product-grid4 .pic-1{opacity:1;transition:all .5s ease-out 0s}
+.product-grid4:hover .pic-1{opacity:0}
+.product-grid4 .pic-2{position:absolute;top:0;left:0;opacity:0;transition:all .5s ease-out 0s}
+.product-grid4:hover .pic-2{opacity:1}
+.product-grid4 .social{width:180px;padding:0;margin:0 auto;list-style:none;position:absolute;right:0;left:0;top:50%;transform:translateY(-50%);transition:all .3s ease 0s}
+.product-grid4 .social li{display:inline-block;opacity:0;transition:all .7s}
+.product-grid4 .social li:nth-child(1){transition-delay:.15s}
+.product-grid4 .social li:nth-child(2){transition-delay:.3s}
+.product-grid4 .social li:nth-child(3){transition-delay:.45s}
+.product-grid4:hover .social li{opacity:1}
+.product-grid4 .social li a{color:#222;background:#fff;font-size:17px;line-height:36px;width:40px;height:36px;border-radius:2px;margin:0 5px;display:block;transition:all .3s ease 0s}
+.product-grid4 .social li a:hover{color:#fff;background:#16a085}
+.product-grid4 .social li a:after,.product-grid4 .social li a:before{content:attr(data-tip);color:#fff;background-color:#000;font-size:12px;line-height:20px;border-radius:3px;padding:0 5px;white-space:nowrap;opacity:0;transform:translateX(-50%);position:absolute;left:50%;top:-30px}
+.product-grid4 .social li a:after{content:'';height:15px;width:15px;border-radius:0;transform:translateX(-50%) rotate(45deg);top:-22px;z-index:-1}
+.product-grid4 .social li a:hover:after,.product-grid4 .social li a:hover:before{opacity:1}
+.product-grid4 .product-discount-label,.product-grid4 .product-new-label{color:#fff;background-color:#16a085;font-size:13px;font-weight:800;text-transform:uppercase;line-height:45px;height:45px;width:45px;border-radius:50%;position:absolute;left:10px;top:15px;transition:all .3s}
+.product-grid4 .product-discount-label{left:auto;right:10px;background-color:#d7292a}
+.product-grid4:hover .product-new-label{opacity:0}
+.product-grid4 .product-content{padding:25px}
+.product-grid4 .title{font-size:15px;font-weight:400;text-transform:capitalize;margin:0 0 7px;transition:all .3s ease 0s}
+.product-grid4 .title a{color:#222}
+.product-grid4 .title a:hover{color:#16a085}
+.product-grid4 .price{color:#16a085;font-size:17px;font-weight:700;margin:0 2px 15px 0;display:block}
+.product-grid4 .price span{color:#909090;font-size:13px;font-weight:400;letter-spacing:0;text-decoration:line-through;text-align:left;vertical-align:middle;display:inline-block}
+.product-grid4 .add-to-cart{border:1px solid #e5e5e5;display:inline-block;padding:10px 20px;color:#888;font-weight:600;font-size:14px;border-radius:4px;transition:all .3s}
+.product-grid4:hover .add-to-cart{border:1px solid transparent;background:#16a085;color:#fff}
+.product-grid4 .add-to-cart:hover{background-color:#505050;box-shadow:0 0 10px rgba(0,0,0,.5)}
+@media only screen and (max-width:990px){.product-grid4{margin-bottom:30px}
+}
+
+/
+/********************* Shopping Demo-8 **********************/
+.product-grid8{font-family:Poppins,sans-serif;position:relative;z-index:1}
+.product-grid8 .product-image8{border:1px solid #e4e9ef;position:relative;transition:all .3s ease 0s}
+.product-grid8:hover .product-image8{box-shadow:0 0 10px rgba(0,0,0,.15)}
+.product-grid8 .product-image8 a{display:block}
+.product-grid8 .product-image8 img{width:100%;height:auto}
+.product-grid8 .pic-1{opacity:1;transition:all .5s ease-out 0s}
+.product-grid8:hover .pic-1{opacity:0}
+.product-grid8 .pic-2{opacity:0;position:absolute;top:0;left:0;transition:all .5s ease-out 0s}
+.product-grid8:hover .pic-2{opacity:1}
+.product-grid8 .social{padding:0;margin:0;list-style:none;position:absolute;bottom:13px;right:13px;z-index:1}
+.product-grid8 .social li{opacity:0;transform:translateY(3px);transition:all .5s ease 0s}
+.product-grid8:hover .social li{margin:0 0 10px;opacity:1;transform:translateY(0)}
+.product-grid8:hover .social li:nth-child(1){transition-delay:.1s}
+.product-grid8:hover .social li:nth-child(2){transition-delay:.2s}
+.product-grid8:hover .social li:nth-child(3){transition-delay:.4s}
+.product-grid8 .social li a{color:grey;font-size:17px;line-height:40px;text-align:center;height:40px;width:40px;border:1px solid grey;display:block;transition:all .5s ease-in-out}
+.product-grid8 .social li a:hover{color:#000;border-color:#000}
+.product-grid8 .product-discount-label{display:block;padding:4px 15px 4px 30px;color:#fff;background-color:#0081c2;position:absolute;top:10px;right:0;-webkit-clip-path:polygon(34% 0,100% 0,100% 100%,0 100%);clip-path:polygon(34% 0,100% 0,100% 100%,0 100%)}
+.product-grid8 .product-content{padding:20px 0 0}
+.product-grid8 .price{color:#000;font-size:19px;font-weight:400;margin-bottom:8px;text-align:left;transition:all .3s}
+.product-grid8 .price span{color:#999;font-size:14px;font-weight:500;text-decoration:line-through;margin-left:7px;display:inline-block}
+.product-grid8 .product-shipping{color:rgba(0,0,0,.5);font-size:15px;padding-left:35px;margin:0 0 15px;display:block;position:relative}
+.product-grid8 .product-shipping:before{content:'';height:1px;width:25px;background-color:rgba(0,0,0,.5);transform:translateY(-50%);position:absolute;top:50%;left:0}
+.product-grid8 .title{font-size:16px;font-weight:400;text-transform:capitalize;margin:0 0 30px;transition:all .3s ease 0s}
+.product-grid8 .title a{color:#000}
+.product-grid8 .title a:hover{color:#0081c2}
+.product-grid8 .all-deals{display:block;color:#fff;background-color:#2e353b;font-size:15px;letter-spacing:1px;text-align:center;text-transform:uppercase;padding:22px 5px;transition:all .5s ease 0s}
+.product-grid8 .all-deals .icon{margin-left:7px}
+.product-grid8 .all-deals:hover{background-color:#0081c2}
+@media only screen and (max-width:990px){.product-grid8{margin-bottom:30px}
+}
+
+
+#hi{background-color: pink;}
+{% endblock %}
+{% block body %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+
+<div class="container">
+    <h3 class="h3">New Products !</h3>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img class="pic-1" src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/13719116/2021/3/3/90d0980a-8b39-48bd-9bf9-a67beb14a9741614753528611-Athena-Fuchsia-Pink-top-with-power-shoulder-sleeve-detail-22-1.jpg">
+                        <img class="pic-2" src="https://images-na.ssl-images-amazon.com/images/I/81aPmz-ByfL._UL1500_.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fas fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fas fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <a class="add-to-cart" href="">Add to cart</a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="{% url 'top' %}">Women's Designer Top</a></h3>
+                    <span class="price">$599.99</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+              <div class="product-image2">
+                  <a href="#">
+                      <img class="pic-1" src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/13435636/2021/1/22/f6914028-82fa-4187-90a4-1867d8eac3a11611296894583IndoEraGreenEmbroideredkurtaPalazzowithDupattaSetsDressesDee1.jpg">
+                      <img class="pic-2" src="https://images.jdmagicbox.com/quickquotes/images_main/b07v57wglh-lavany-womens-dresses-lavany-women-s-summer-casual-t-shirt-dresses-short-sleeve-swing-dress-with-pockets-178903024-pjib6.jpg">
+                  </a>
+                  <ul class="social">
+                      <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                      <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a class="add-to-cart" href="">Add to cart</a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Dresses</a></h3>
+                    <span class="price">$699.99</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img class="pic-1" src="https://i.pinimg.com/originals/d7/c5/8f/d7c58f0cb4ea7aaf20deea1bf4750efd.jpg">
+                        <img class="pic-2" src="https://shop.diesel.com/on/demandware.static/-/Sites-diesel-mf-navigation-catalog-na/default/dwa5198107/VisualFilters/BOYFRIEND_FL2.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <a class="add-to-cart" href="">Add to cart</a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's jeans</a></h3>
+                    <span class="price">$599.99</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img class="pic-1" src="https://www.hellomagazine.com/imagenes/fashion/hfm/2020030385712/best-suits-for-women/0-412-34/ms-suit-a.jpg">
+                        <img class="pic-2" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cara-delevingne-attends-the-boss-fashion-show-on-february-news-photo-1582541335.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <a class="add-to-cart" href="">Add to cart</a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Suits</a></h3>
+                    <span class="price">$599.99</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <h3 class="h3">Discount! Discount! Discount!</h3>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid4">
+                <div class="product-image4">
+                    <a href="#">
+                        <img class="pic-1" src="https://rukminim1.flixcart.com/image/714/857/jv5k2a80/top/t/g/f/xl-lacetop-derris-original-imafc6ne5ekepp5f.jpeg">
+                        <img class="pic-2" src="https://assets.ajio.com/medias/sys_master/root/20210403/B9BX/6068643daeb269a9e3315094/rare_black_floral_top_with_choker_collar.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                    <span class="product-discount-label">-10%</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Top</a></h3>
+                    <div class="price">
+                        $14.40
+                        <span>$16.00</span>
+                    </div>
+                    <a class="add-to-cart" href="">ADD TO CART</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid4">
+                <div class="product-image4">
+                    <a href="#">
+                        <img class="pic-1" src="https://images-na.ssl-images-amazon.com/images/I/91FiFqCCwML._UL1500_.jpg">
+                        <img class="pic-2" src="https://cdn1.ninecolours.com/image/cache/products-2018/October/Indian-Women-Georgette-Designer-Saree-In-Green-and-Black-Colour-SR0062217-A-1200x1799.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-discount-label">-12%</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Saree</a></h3>
+                    <div class="price">
+                        $17.60
+                        <span>$20.00</span>
+                    </div>
+                    <a class="add-to-cart" href="">ADD TO CART</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid4">
+                <div class="product-image4">
+                    <a href="#">
+                        <img class="pic-1" src="https://images-na.ssl-images-amazon.com/images/I/71EkBDJA4mL._UY550_.jpg">
+                        <img class="pic-2" src="https://m.media-amazon.com/images/I/81to-1RsvXL._UL1500_.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                    <span class="product-discount-label">-10%</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Salwar Suits </a></h3>
+                    <div class="price">
+                        $14.40
+                        <span>$16.00</span>
+                    </div>
+                    <a class="add-to-cart" href="">ADD TO CART</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid4">
+                <div class="product-image4">
+                    <a href="#">
+                        <img class="pic-1" src="https://d5n0lf4gshqmd.cloudfront.net/img/2000291059_400_p6/1200/1500/i.jpg">
+                        <img class="pic-2" src="https://4.imimg.com/data4/BI/YG/MY-29661950/western-dress-500x500.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                    <span class="product-discount-label">-10%</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Western Wear</a></h3>
+                    <div class="price">
+                        $14.40
+                        <span>$16.00</span>
+                    </div>
+                    <a class="add-to-cart" href="">ADD TO CART</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <h3 class="h3">Free Shipping Products!</h3>
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="product-grid8">
+                <div class="product-image8">
+                    <a href="#">
+                        <img class="pic-1" src="https://www.shopperwear.com/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/s/u/summer-women-shoes-casual-cutouts-lace-canvas-shoes-hollow-floral-breathable-platform-flat-shoe-sposato-feminine-white.jpg">
+                        <img class="pic-2" src="http://www.actionestore.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/s/lsn01-pink-4.png">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                    </ul>
+                    <span class="product-discount-label">-20%</span>
+                </div>
+                <div class="product-content">
+                    <div class="price">£ 8.00
+                        <span>£ 10.00</span>
+                    </div>
+                    <span class="product-shipping">Free Shipping</span>
+                    <h3 class="title"><a href="#">Women's Shoes</a></h3>
+                    <a class="all-deals" href="">See all deals <i class="fa fa-angle-right icon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="product-grid8">
+                <div class="product-image8">
+                    <a href="#">
+                        <img class="pic-1" src="https://5.imimg.com/data5/SELLER/Default/2020/12/QI/JD/TV/38244755/jivika-superior-women-lehenga-choli-500x500.jpg">
+                        <img class="pic-2" src="https://4.imimg.com/data4/GM/HA/MY-20172543/nj-fabric-embroidered-women-s-lehenga-choli-and-dup-500x500.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                    </ul>
+                    <span class="product-discount-label">-30%</span>
+                </div>
+                <div class="product-content">
+                    <div class="price">£ 7.00
+                        <span>£ 10.00</span>
+                    </div>
+                    <span class="product-shipping">Free Shipping</span>
+                    <h3 class="title"><a href="#">Women's Designer Lehnga</a></h3>
+                    <a class="all-deals" href="">See all deals <i class="fa fa-angle-right icon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="product-grid8">
+                <div class="product-image8">
+                    <a href="#">
+                        <img class="pic-1" src="https://cdn.shopify.com/s/files/1/0074/0219/2951/products/Fashion-Indian-Bridal-Earrings-Necklace-Set-Dubai-Luxury-Crystal-Wedding-Jewelry-Sets-Gold-Color-Women-s.jpg_640x640_4e823460-0ad2-4067-9042-ae0483b5d615_grande.jpg">
+                        <img class="pic-2" src="https://cdn.shopclues.com/images1/thumbnails/81087/640/1/135415215-81087005-1528450873.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                    </ul>
+                    <span class="product-discount-label">-20%</span>
+                </div>
+                <div class="product-content">
+                    <div class="price">£ 8.00
+                        <span>£ 10.00</span>
+                    </div>
+                    <span class="product-shipping">Free Shipping</span>
+                    <h3 class="title"><a href="#">Women's Jwellery</a></h3>
+                    <a class="all-deals" href="earing.html">See all deals <i class="fa fa-angle-right icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+{% endblock %}

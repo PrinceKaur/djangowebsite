@@ -1,0 +1,654 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+.box:hover {background: ; box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
+	/*bike*/
+	/* font Awesome http://fontawesome.io*/
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+/* Animation.css*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css);
+
+.col-item {
+  border: 1px solid #E1E1E1;
+  background: #FFF;
+  margin-bottom:12px;
+}
+.col-item .options {
+  position:absolute;
+  top:6px;
+  right:22px;
+}
+.col-item .photo {
+  overflow: hidden;
+}
+.col-item .photo .options {
+  display:none;
+}
+.col-item .photo img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.col-item .options-cart {
+  position:absolute;
+  left:22px;
+  top:6px;
+  display:none;
+}
+.col-item .photo:hover .options,
+.col-item .photo:hover .options-cart {
+  display:block;
+  -webkit-animation: fadeIn .5s ease;
+  -moz-animation: fadeIn .5s ease;
+  -ms-animation: fadeIn .5s ease;
+  -o-animation: fadeIn .5s ease;
+  animation: fadeIn .5s ease;
+}
+.col-item .options-cart-round {
+  position:absolute;
+  left:42%;
+  top:22%;
+  display:none;
+}
+.col-item .options-cart-round button {
+  border-radius: 50%;
+  padding:14px 16px;
+  
+}
+.col-item .options-cart-round button .fa {
+  font-size:22px;
+}
+.col-item .photo:hover .options-cart-round {
+  display:block;
+  -webkit-animation: fadeInDown .5s ease;
+  -moz-animation: fadeInDown .5s ease;
+  -ms-animation: fadeInDown .5s ease;
+  -o-animation: fadeInDown .5s ease;
+  animation: fadeInDown .5s ease;
+}
+.col-item .info {
+  padding: 10px;
+  margin-top: 1px;
+}
+.col-item .price-details {
+  width: 100%;
+  margin-top: 5px;
+}
+.col-item .price-details h1 {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  float:left;
+}
+.col-item .price-details .details {
+  margin-bottom: 0px;
+  font-size:12px;
+}
+.col-item .price-details span {
+  float:right;
+}
+.col-item .price-details .price-new {
+  font-size:16px;
+}
+.col-item .price-details .price-old {
+  font-size:18px;
+  text-decoration:line-through;
+}
+.col-item .separator {
+  border-top: 1px solid #E1E1E1;
+}
+
+.col-item .clear-left {
+  clear: left;
+}
+.col-item .separator a {
+  text-decoration:none;
+}
+.col-item .separator p {
+  margin-bottom: 0;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.col-item .separator p i {
+  margin-right: 5px;
+}
+.col-item .btn-add {
+  width: 60%;
+  float: left;
+}
+.col-item .btn-add a {
+  display:inline-block !important;
+}
+.col-item .btn-add {
+  border-right: 1px solid #E1E1E1;
+}
+.col-item .btn-details {
+  width: 40%;
+  float: left;
+  padding-left: 10px;
+}
+.col-item .btn-details a {
+  display:inline-block !important;
+}
+.col-item .btn-details a:first-child {
+  margin-right:12px;
+}
+/*car*/
+.row{
+    padding-top:25px;
+}
+
+
+card {
+  display: block;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    transition: box-shadow .25s;
+}
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.img-card {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}
+.img-card img{
+  width: 100%;
+  height: 200px;
+  object-fit:cover;
+  transition: all .25s ease;
+}
+.card-content {
+  padding:15px;
+  text-align:left;
+}
+.card-title {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.card-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+.card-read-more {
+  border-top: 1px solid #D4D4D4;
+}
+.card-read-more a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
+#hi{background-color: pink;}
+{% endblock %}
+{% block body %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+<div class="upcoming py-5">
+    <div class="container">
+    <div class="row pb-4 text-center">
+        <div class="col-md-12">
+            <h2 class="text-primary">Upcoming & Latest cars</h2>
+            <p class="text-danger"> Pre-booked lessons, on-call lessons are Not refundable unless cancelled more than 24 hours.</p>
+        </div>
+    </div>
+	<div class="row text-center">
+		<div class="col-md-3 box border py-4">
+		    <div class="box-carimage">
+		        <img src="https://img0.gaadicdn.com/images/car-images/265x110/Tata/Tata-Nexon/047.jpg" alt="">
+		    </div>
+		    <div class="box-cartitle">
+		        <h4> Mahindra XUV500 </h4>
+		    </div>
+		    <div class="box-carprice">
+		        <h6><i class="fa fa-inr"></i>14.0 Lac*</h6>
+		    </div>
+		    <div class="box-date pb-3">
+		        <small>Launch Date:Coming Soon </small>
+		        
+		    </div>
+		    <button type="button" class="btn btn-outline-danger">Book Now</button>
+		</div>
+		<div class="col-md-3 box border py-4">
+		    <div class="box-carimage">
+		        <img src="https://media.zigcdn.com/media/model/2021/Mar/kiger-6_270x180.jpg" alt="">
+		    </div>
+		    <div class="box-cartitle">
+		        <h4> kiger</h4>
+		    </div>
+		    <div class="box-carprice">
+		        <h6><i class="fa fa-inr"></i>13.0 Lac*</h6>
+		    </div>
+		    <div class="box-date pb-3">
+		        <small>Launch Date:Coming Soon </small>
+		        
+		    </div>
+		    <button type="button" class="btn btn-outline-danger">Book Now</button>
+		</div>
+		<div class="col-md-3 box border py-4">
+		    <div class="box-carimage">
+		        <img src="https://media.zigcdn.com/media/model/2020/Nov/hyundai-i20-2_270x180.jpg" alt="">
+		    </div>
+		    <div class="box-cartitle">
+		        <h4> Vitara</h4>
+		    </div>
+		    <div class="box-carprice">
+		        <h6><i class="fa fa-inr"></i>12.0 Lac*</h6>
+		    </div>
+		    <div class="box-date pb-3">
+		        <small>Launch Date:Coming Soon </small>
+		        
+		    </div>
+		    <button type="button" class="btn btn-outline-danger">Book Now</button>
+		</div>
+		<div class="col-md-3 box border py-4">
+		    <div class="box-carimage">
+		        <img src="https://assets.zappyride.com/img/vehicles/still-set-1280-thumbnails/Karma_GS-6__PHEV_2021/116.png" alt="">
+		    </div>
+		    <div class="box-cartitle">
+		        <h4> Mahindra Compact XUV</h4>
+		    </div>
+		    <div class="box-carprice">
+		        <h6><i class="fa fa-inr"></i>15.0 Lac*</h6>
+		    </div>
+		    <div class="box-date pb-3">
+		        <small>Launch Date: Coming Soon </small>
+		        
+		    </div>
+		    <button type="button" class="btn btn-outline-danger">Book Now</button>
+		</div>
+	</div>
+	<div class="row text-center pt-4">
+	    <div class="col-md-12">
+	        <button type="button" class="btn btn-danger">View All Upcoming Cars</button>
+	    </div>
+	</div>
+</div>
+</div>
+<hr>
+<!-- bike -->
+<h2 class="text-center"><u>Latest Bikes</h2></u>
+
+<div class="container">
+	<div class="row">
+        
+        <div class="col-sm-3">
+            <article class="col-item">
+            	<div class="photo">
+        			<div class="options-cart-round">
+        				<button class="btn btn-default" title="Add to cart">
+        					<span class="fa fa-shopping-cart"></span>
+        				</button>
+        			</div>
+        			<a href="#"> <img src="https://media.zigcdn.com/media/model/2021/Feb/royal-enfield-classic-350-dual-channel_270x180.jpg" class="img-responsive" alt="Product Image" /> </a>
+        		</div>
+        		<div class="info">
+        			<div class="row">
+        				<div class="price-details col-md-6">
+        					<p class="details">
+        						Double Power 550CC
+        					</p>
+        					<h1>JAWA</h1>
+        					<span class="price-new">$700.00</span>
+        				</div>
+        			</div>
+        		</div>
+        	</article>
+            
+        </div>
+        <div class="col-sm-3">
+            <article class="col-item">
+        		<div class="photo">
+        			<div class="options">
+        				<button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+        					<i class="fa fa-heart"></i>
+        				</button>
+        				<button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Compare">
+        					<i class="fa fa-exchange"></i>
+        				</button>
+        			</div>
+        			<div class="options-cart">
+        				<button class="btn btn-default" title="Add to cart">
+        					<span class="fa fa-shopping-cart"></span>
+        				</button>
+        			</div>
+        			<a href="#"> <img src="https://m.media-amazon.com/images/I/617OW8TPOWL._AC_SS450_.jpg" class="img-responsive" alt="Product Image" /> </a>
+        		</div>
+        		<div class="info">
+        			<div class="row">
+        				<div class="price-details col-md-6">
+        					<p class="details">
+        						Sports Bike 
+        					</p>
+        					<h1>YAMAHA</h1>
+        					<span class="price-new">$610.00</span>
+        				</div>
+        			</div>
+        		</div>
+        	</article>
+            
+        </div>
+        <div class="col-sm-3">
+        	<article class="col-item">
+        		<div class="options">
+        			<button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+        				<i class="fa fa-heart"></i>
+        			</button>
+        			<button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Compare">
+        				<i class="fa fa-exchange"></i>
+        			</button>
+        		</div>
+        		<div class="photo">
+        			<a href="#"> <img src="https://images.livemint.com/img/2020/09/13/600x338/Screenshot_(158)_1600000296184_1600000322468.png" class="img-responsive" alt="Product Image" /> </a>
+        		</div>
+        		<div class="info">
+        			<div class="row">
+        				<div class="price-details col-md-6">
+        					<p class="details">
+        						Luxury Bike.
+        					</p>
+        					<h1>BMW</h1>
+        					<span class="price-new">$710.00</span>
+        				</div>
+        			</div>
+        		</div>
+        	</article>
+        </div>
+        <div class="col-sm-3">
+        	<article class="col-item">
+        		<div class="photo">
+        			<a href="#"> <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2020-01/16/full/1579192730-3401.png" class="img-responsive" alt="Product Image" /> </a>
+        		</div>
+        		<div class="info">
+        			<div class="row">
+        				<div class="price-details col-md-6">
+        					<p class="details">
+        						Bullet with 330CC
+        					</p>
+        					<h1>Royal Enfield</h1>
+        					<span class="price-new">$610.00</span>
+        				</div>
+        			</div>
+        			<div class="separator clear-left">
+        				<p class="btn-add">
+        					<i class="fa fa-shopping-cart"></i><a href="#" class="hidden-sm">Add to cart</a>
+        				</p>
+        				<p class="btn-details">
+        					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart"></i></a>
+        					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
+        				</p>
+        			</div>
+        			<div class="clearfix"></div>
+        		</div>
+        	</article>
+        </div>
+	</div>
+</div>
+<hr>
+<!-- car -->
+<h2 class="text-primary text-center"><u>Trendy Bikes & Cars</h2></u>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+                <a class="img-card" href="http://www.fostrap.com/">
+                    <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"/>
+                </a>
+                <br />
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="http://www.fostrap.com/">
+                            BMW X5 SERIES
+                        </a>
+                    </h4>
+                    <div class="">
+                        5Seater,Mileage:11.24to13.38kmpl, Petrol
+                    </div>
+                </div>
+                <div class="card-read-more">
+                    <a class="btn btn-link btn-block" href="http://www.fostrap.com/">
+                        BUY NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+                <a class="img-card" href="http://www.fostrap.com/">
+                    <img src="https://i.pinimg.com/originals/a0/7d/8c/a07d8c76f81104162b04f0f3ed8cf219.jpg">
+                </a>
+                <br />
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="http://www.fostrap.com/">
+                            MUSTANG
+                        </a>
+                    </h4>
+                    <div class="">
+                        Sports Car,Mileage:7.9kmpl, Petrol
+                    </div>
+                </div>
+                <div class="card-read-more">
+                    <a class="btn btn-link btn-block" href="http://www.fostrap.com/">
+                        BUY NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+                <a class="img-card" href="http://www.fostrap.com/">
+                    <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iho0QqgeF4K8/v1/1000x-1.jpg">
+                </a>
+                <br />
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="http://www.fostrap.com/">
+                            AMG
+                        </a>
+                    </h4>
+                    <div class="">
+                        Mercedes-Benz Car,Diesel
+                    </div>
+                </div>
+                <div class="card-read-more">
+                    <a class="btn btn-link btn-block" href="http://www.fostrap.com/">
+                        BUY NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+                <a class="img-card" href="http://www.fostrap.com/">
+                    <img src="https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/lamborghini_660_140220101539.jpg">
+                </a>
+                <br />
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="http://www.fostrap.com/">
+                            LAMBORGHINI
+                        </a>
+                    </h4>
+                    <div class="">
+                        Luxury Car,V12 Engine, Petrol
+                    </div>
+                </div>
+                <div class="card-read-more">
+                    <a class="btn btn-link btn-block" href="http://www.fostrap.com/">
+                        BUY NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+                <a class="img-card" href="http://www.fostrap.com/">
+                    <img src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/rrswbphev006.jpg">
+                </a>
+                <br />
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="http://www.fostrap.com/">
+                            RANGE ROVER
+                        </a>
+                    </h4>
+                    <div class="">
+                        Luxury SUV,Engine:2993to2996cc, Petrol
+                    </div>
+                </div>
+                <div class="card-read-more">
+                    <a class="btn btn-link btn-block" href="http://www.fostrap.com/">
+                        BUY NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+                <a class="img-card" href="http://www.fostrap.com/">
+                    <img src="https://static.theceomagazine.net/wp-content/uploads/2019/06/28114417/brabham-bt62.jpg">
+                </a>
+                <br />
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="http://www.fostrap.com/">
+                            FERRARI
+                        </a>
+                    </h4>
+                    <div class="">
+                        Luxury Sports Car, Petrol
+                    </div>
+                </div>
+                <div class="card-read-more">
+                    <a class="btn btn-link btn-block" href="http://www.fostrap.com/">
+                        BUY NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- car -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+                <a class="img-card" href="http://www.fostrap.com/">
+                    <img src="https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/cbr650r_660_copy_080320044751.jpg">
+                </a>
+                <br />
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="http://www.fostrap.com/">
+                            HONDA
+                        </a>
+                    </h4>
+                    <div class="">
+                        Mileage:74kmpl, Petrol
+                    </div>
+                </div>
+                <div class="card-read-more">
+                    <a class="btn btn-link btn-block" href="http://www.fostrap.com/">
+                        BUY NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+                <a class="img-card" href="http://www.fostrap.com/">
+                    <img src="https://www.businessinsider.in/photo/74134283/top-bs6-bikes-and-scooters-in-india.jpg">
+                </a>
+                <br />
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="http://www.fostrap.com/">
+                            ROYAL ENFIELD
+                        </a>
+                    </h4>
+                    <div class="">
+                        Engine:350cc, Petrol
+                    </div>
+                </div>
+                <div class="card-read-more">
+                    <a class="btn btn-link btn-block" href="http://www.fostrap.com/">
+                        BUY NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="card">
+                <a class="img-card" href="http://www.fostrap.com/">
+                    <img src="https://im.rediff.com/getahead/2016/jun/01bike4.jpg">
+                </a>
+                <br />
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="http://www.fostrap.com/">
+                           KTM
+                        </a>
+                    </h4>
+                    <div class="">
+                        Engine:200cc, Petrol
+                    </div>
+                </div>
+                <div class="card-read-more">
+                    <a class="btn btn-link btn-block" href="http://www.fostrap.com/">
+                        BUY NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+</div>
+{% endblock %}

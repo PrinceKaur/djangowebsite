@@ -1,0 +1,246 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
+
+
+/********************* Shopping Demo-6 **********************/
+.product-grid6,.product-grid6 .product-image6{overflow:hidden}
+.product-grid6{font-family:'Open Sans',sans-serif;text-align:center;position:relative;transition:all .5s ease 0s}
+.product-grid6:hover{box-shadow:0 0 10px rgba(0,0,0,.3)}
+.product-grid6 .product-image6 a{display:block}
+.product-grid6 .product-image6 img{width:100%;height:auto;transition:all .5s ease 0s}
+.product-grid6:hover .product-image6 img{transform:scale(1.1)}
+.product-grid6 .product-content{padding:12px 12px 15px;transition:all .5s ease 0s}
+.product-grid6:hover .product-content{opacity:0}
+.product-grid6 .title{font-size:20px;font-weight:600;text-transform:capitalize;margin:0 0 10px;transition:all .3s ease 0s}
+.product-grid6 .title a{color:#000}
+.product-grid6 .title a:hover{color:#2e86de}
+.product-grid6 .price{font-size:18px;font-weight:600;color:#2e86de}
+.product-grid6 .price span{color:#999;font-size:15px;font-weight:400;text-decoration:line-through;margin-left:7px;display:inline-block}
+.product-grid6 .social{background-color:#fff;width:100%;padding:0;margin:0;list-style:none;opacity:0;transform:translateX(-50%);position:absolute;bottom:-50%;left:50%;z-index:1;transition:all .5s ease 0s}
+.product-grid6:hover .social{opacity:1;bottom:20px}
+.product-grid6 .social li{display:inline-block}
+.product-grid6 .social li a{color:#909090;font-size:16px;line-height:45px;text-align:center;height:45px;width:45px;margin:0 7px;border:1px solid #909090;border-radius:50px;display:block;position:relative;transition:all .3s ease-in-out}
+.product-grid6 .social li a:hover{color:#fff;background-color:#2e86de;width:80px}
+.product-grid6 .social li a:after,.product-grid6 .social li a:before{content:attr(data-tip);color:#fff;background-color:#2e86de;font-size:12px;letter-spacing:1px;line-height:20px;padding:1px 5px;border-radius:5px;white-space:nowrap;opacity:0;transform:translateX(-50%);position:absolute;left:50%;top:-30px}
+.product-grid6 .social li a:after{content:'';height:15px;width:15px;border-radius:0;transform:translateX(-50%) rotate(45deg);top:-20px;z-index:-1}
+.product-grid6 .social li a:hover:after,.product-grid6 .social li a:hover:before{opacity:1}
+@media only screen and (max-width:990px){.product-grid6{margin-bottom:30px}
+}
+
+
+#hi{background-color: pink;}
+{% endblock %}
+{% block body %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+
+<div class="container">
+    <h3 class="h3 text-primary"><b>Vaccum Cleaner </h3></b><hr>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="https://n2.sdlcdn.com/imgs/g/6/v/vc-8886a.JPG">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Portable</a></h3>
+                    <div class="price">$11.00
+                        <span>$14.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="https://www.tennantco.com/services/product/image.tennant.9007469.image">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Wet </a></h3>
+                    <div class="price">$8.00
+                        <span>$12.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="http://vertassets.blob.core.windows.net/image/c70c43e0/c70c43e0-3fc6-4080-88dd-7755d82125ad/mdl110pressrlsphoto.jpg">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Industrial</a></h3>
+                    <div class="price">$11.00
+                        <span>$14.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="https://previews.123rf.com/images/venusangel/venusangel1212/venusangel121200683/16920864-housewife-using-vacuum-cleaner-machine-to-clean-her-house.jpg">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">House Keeping</a></h3>
+                    <div class="price">$11.00
+                        <span>$14.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <h3 class="h3 text-primary"><b>Limited Discount Period!</h3></b><hr>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="https://bsg-i.nbxc.com/product/d3/ee/3e/767c25fe44da6c068b3141352e.jpg@watermark=2&text=d3d3Lmhvbmt0ZWNoLmNvbQ%3D%3D&t=75&color=I0ZGRkZGRg%3D%3D&size=31&p=9%7C95Q.webp">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Portable</a></h3>
+                    <div class="price">$11.00
+                        <span>$14.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/f4/f49e2f4761405339d66d7d2837379cc362e115fc.jpg">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Wet </a></h3>
+                    <div class="price">$8.00
+                        <span>$12.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="https://static.jh-profishop.lv/1351-pdt_540/basic-industrial-vacuum-cleaner-2400-watts-70-litre.jpg">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Industrial</a></h3>
+                    <div class="price">$11.00
+                        <span>$14.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="https://image.freepik.com/free-photo/full-shot-woman-vacuuming_23-2148521004.jpg">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">House Keeping</a></h3>
+                    <div class="price">$11.00
+                        <span>$14.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+{% endblock %}

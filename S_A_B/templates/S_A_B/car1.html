@@ -1,0 +1,369 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+body
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;
+}
+
+.product_container
+{
+	width:25%;
+	box-sizing:border-box;
+	position:relative;
+	float:left;
+	padding:10px;
+	box-shadow:0px 0px 3px #333;
+	transition:all ease-in-out 0.3s;
+}
+
+.image_container img
+{
+	width:100%;
+	max-height:150px;
+}
+
+.category
+{
+	color:#666;
+	font-weight:600;
+	font-size:14px;
+	margin-top:	60px;
+}
+
+.clear
+{
+	clear:both;
+}
+
+.name
+{
+	float:left;
+}
+
+.assured
+{
+	float:left;
+}
+
+.assured img
+{
+	width:80px;
+	height:15px;
+}
+
+.p_container
+{
+	margin-top:7px;
+}
+
+.n_p
+{
+	float:left;
+	font-weight:800;
+}
+
+.o_p
+{
+	float:left;
+	margin-left:10px;
+}
+
+.offer
+{
+	float:left;
+	margin-left:10px;
+	color:rgba(0,153,0,1);
+}
+
+.bank
+{
+	color:rgba(0,153,0,1);
+	margin-top:7px;
+	font-weight:800;
+}
+
+.heart
+{
+	position:absolute;
+	top:20px;
+	left:20px;
+	color:#f60;
+}
+
+.heart i
+{
+	font-size:25px;
+}
+
+.quick
+{
+	display:none;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	background:#f60;
+	width:100px;
+	height:100px;
+	border-radius:100%;
+	line-height:100px;
+	text-align:center;
+	font-size:13px;
+	color:#fff;
+	font-weight:800;
+	transition:all ease-in-out 0.3s;
+	cursor:pointer;
+}
+
+.product_container:hover .quick
+{
+	display:block;
+}
+
+
+@media (max-width: 767px) 
+{
+	.product_container
+	{
+	  width:100%;
+	  padding:10px;
+	  box-sizing:border-box;
+	  margin-left:0px;
+	  margin-top:10px;
+	  box-shadow:0px 0px 1px #333;
+	}
+}
+
+#hi{background-color: pink;}
+
+{% endblock %}
+{% block body %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+
+		<h2 class="text-warning text-center"><u>Cars For Your Luxury Ride!</h2></u>
+        <br><br>
+        <br>
+	
+
+<div class="product_container">
+   <div class="heart"><i class="fa fa-heart"></i></div>
+   <div class="quick">Quick View</div>
+   
+   <div class="image_container"><img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iho0QqgeF4K8/v1/1000x-1.jpg" /></div>
+   <div class="category">AMG</div>
+   
+   
+   
+   <div class="p_container">
+      <div class="n_p">$.5009</div>
+      <div class="o_p">$.6099</div>
+      <div class="offer">54% Off</div>
+     <div class="clear"></div>
+   </div>
+   
+   <div class="bank">
+      Bank Offer
+   </div>
+   
+</div>
+
+
+<div class="product_container">
+   <div class="heart"><i class="fa fa-heart"></i></div>
+   <div class="quick">Quick View</div>
+   
+   <div class="image_container"><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/all-new-f-150-003-jpg-1618255219.jpg" /></div>
+   <div class="category">Ford</div>
+   
+   
+   <div class="p_container">
+      <div class="n_p">$.5109</div>
+      <div class="o_p">$.6199</div>
+      <div class="offer">54% Off</div>
+     <div class="clear"></div>
+   </div>
+   
+   <div class="bank">
+      Bank Offer
+   </div>
+   
+</div>
+
+
+
+<div class="product_container">
+   <div class="heart"><i class="fa fa-heart"></i></div>
+   <div class="quick">Quick View</div>
+   
+   <div class="image_container"><img src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/rrswbphev006.jpg" /></div>
+   <div class="category">Range Rover</div>
+   
+  
+   
+   <div class="p_container">
+      <div class="n_p">$.5090</div>
+      <div class="o_p">$.6990</div>
+      <div class="offer">54% Off</div>
+     <div class="clear"></div>
+   </div>
+   
+   <div class="bank">
+      Bank Offer
+   </div>
+   
+</div>
+
+
+
+<div class="product_container">
+   <div class="heart"><i class="fa fa-heart"></i></div>
+   <div class="quick">Quick View</div>
+   
+   <div class="image_container"><img src="https://i.pinimg.com/originals/5e/6f/34/5e6f342a8fc53f122714f9e386fac37a.jpg" /></div>
+   <div class="category">Vintage Car</div>
+   
+   
+   
+   <div class="p_container">
+      <div class="n_p">$5119</div>
+      <div class="o_p">$6919</div>
+      <div class="offer">54% Off</div>
+     <div class="clear"></div>
+   </div>
+   
+   <div class="bank">
+      Bank Offer
+   </div>
+   
+</div>
+
+<div class="product_container">
+   <div class="heart"><i class="fa fa-heart"></i></div>
+   <div class="quick">Quick View</div>
+   
+   <div class="image_container"><img src="https://cars.usnews.com/images/article/202103/126924/2021_BMW_X1_2_1.jpg" /></div>
+   <div class="category">BMW XI</div>
+   
+   
+   
+   <div class="p_container">
+      <div class="n_p">$.5119</div>
+      <div class="o_p">$.6199</div>
+      <div class="offer">54% Off</div>
+     <div class="clear"></div>
+   </div>
+   
+   <div class="bank">
+      Bank Offer
+   </div>
+   
+</div>
+
+
+<div class="product_container">
+   <div class="heart"><i class="fa fa-heart"></i></div>
+   <div class="quick">Quick View</div>
+   
+   <div class="image_container"><img src="https://c.ndtvimg.com/2020-08/ni5cegjo_allnew-thar-suv-unveiled_625x300_15_August_20.jpg"></div>
+   <div class="category">Mahindra Thar</div>
+   
+   
+   <div class="p_container">
+      <div class="n_p">$.5110</div>
+      <div class="o_p">$.6189</div>
+      <div class="offer">54% Off</div>
+     <div class="clear"></div>
+   </div>
+   
+   <div class="bank">
+      Bank Offer
+   </div>
+   
+</div>
+
+
+
+<div class="product_container">
+   <div class="heart"><i class="fa fa-heart"></i></div>
+   <div class="quick">Quick View</div>
+   
+   <div class="image_container"><img src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/rrswbphev006.jpg" /></div>
+   <div class="category">Range Rover</div>
+   
+  
+   
+   <div class="p_container">
+      <div class="n_p">$.5090</div>
+      <div class="o_p">$.6990</div>
+      <div class="offer">54% Off</div>
+     <div class="clear"></div>
+   </div>
+   
+   <div class="bank">
+      Bank Offer
+   </div>
+   
+</div>
+
+
+
+<div class="product_container">
+   <div class="heart"><i class="fa fa-heart"></i></div>
+   <div class="quick">Quick View</div>
+   
+   <div class="image_container"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Rolls_Royce_Phantom_IV_1952.JPG/1200px-Rolls_Royce_Phantom_IV_1952.JPG" /></div>
+   <div class="category">Luxury Car</div>
+   
+   
+   
+   <div class="p_container">
+      <div class="n_p">$5090</div>
+      <div class="o_p">$6990</div>
+      <div class="offer">54% Off</div>
+     <div class="clear"></div>
+   </div>
+   
+   <div class="bank">
+      Bank Offer
+   </div>
+   
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+
+html,body{
+background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;}
+
+  }
+}
+{% endblock %}
+{% block body %}
+<!-- SignUp Modal -->
+{% load static %}
+<div align="center" style="padding-top: 150px;">
+      <h2 align="center">Create Users</h2>
+<form method="post">
+  {% csrf_token %}
+  {{register_form}}
+  <button class="btn btn-primary" type="submit">Sign up</button>
+</form>
+
+
+    </div>
+        {% if alert %}
+  <script type="text/javascript">
+    alert('{{alert}}');
+  </script>
+  {% endif  %}
+    
+{% endblock %}

@@ -1,0 +1,218 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+ @import url("https://fonts.googleapis.com/css?family=Muli:400,700&display=swap");
+
+body {
+  margin: 0;
+  height: calc(100vh - 8em);
+  font-family: "Muli", sans-serif;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  margin: 1.5em;
+}
+
+img {
+  width: 35%;
+  border-radius: 50%;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  animation: carouselAnim 50s infinite alternate linear;
+}
+
+.entry {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 300px;
+  background: #fff;
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 768px) {
+  .items {
+    animation: carouselAnim 35s infinite alternate linear;
+  }
+  
+  @keyframes carouselAnim {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(calc(-100% + (2 * 300px)));
+    }
+  }
+}
+
+.entry p {
+  text-align: center;
+  padding: 1em;
+}
+
+.name {
+  font-weight: bold;
+}
+
+@keyframes carouselAnim {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(calc(-100% + (5 * 300px)));
+  }
+}
+
+.container .faders {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+
+.faders .right,
+.faders .left {
+  background: linear-gradient(
+    to right,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  z-index: 200;
+}
+
+.right {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+#hi{background-color: pink;}
+
+{% endblock %}
+{% block body %}
+<div class="container">
+<div class="row">
+  <div class="col-sm-12">
+<nav class="navbar navbar-expand-md navbar-dark" id="hi">
+  
+
+  
+
+ <nav class="navbar navbar-expand navbar-dark" id="hi">
+        <a href="{% url 'home' %}" class="navbar-brand h4 text-dark">Home</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              
+                <a href="{% url 'abouts' %}" class="nav-item active nav-link h5 text-dark">About Us</a>
+                <a href="{% url 'contact' %}" class="nav-item active nav-link h5 text-dark">Contact Us</a>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active h5 text-dark" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">categories</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a href="{% url 'all' %}" class="dropdown-item">All</a>
+                        <a href="{% url 'mobile' %}" class="dropdown-item">Mobiles</a>
+                        <a href="{% url 'car' %}" class="dropdown-item">Cars & Bikes</a>
+                        <a href="{% url 'fashion' %}" class="dropdown-item">Fashion</a>
+                        <a href="{% url 'kids' %}" class="dropdown-item">Kids</a>
+                        <a href="{% url 'furniture' %}" class="dropdown-item">Furniture</a>
+                        <a href="{% url 'electronics' %}" class="dropdown-item">Electronics & Appliances</a>
+                        <a href="{% url 'beauty' %}" class="dropdown-item">Beauty Products</a>
+                        <a href="{% url 'camera' %}" class="dropdown-item">Camera</a>
+                        <a href="{% url 'shoes' %}" class="dropdown-item">Shoes</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active h5 text-dark" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select City</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a href="#" class="dropdown-item">Chandigarh</a>
+                        <a href="#" class="dropdown-item">Mohali</a>
+                        <a href="#" class="dropdown-item">Panchkula</a>
+                    </div>
+                </li>
+              
+            </ul>
+
+          </div>  
+        </div>
+    </nav>
+  
+<h1><u>Amazing Air Conditioner</h1></u>
+<div class="container">
+<div class="faders">
+<div class="left"></div>
+<div class="right"></div>
+</div>
+<div class="items">
+<div class="entry">
+<p class="name">Window AC</p>
+<img src="https://s3-assets.sylvane.com/media/images/articles/5-things-to-consider-when-buying-a-window-air-conditioner-main.jpg" alt="Smiling person" />
+<p class="quote">Useful for home use <br>$413<br><button>Buy Now</button></p>
+</div>
+<div class="entry">
+<p class="name">Portable</p>
+<img src="https://5.imimg.com/data5/JL/DP/MY-3629302/portable-air-conditioner-500x500.jpg" alt="Smiling person" />
+<p class="quote">Useful for dining room <br>$103<br><button>Buy Now</button></p>
+</div>
+<div class="entry">
+<p class="name">Portable Air Conditioner</p>
+<img src="https://5.imimg.com/data5/KO/YL/MY-11053443/portable-air-conditioner-500x500.jpg" alt="Smiling person" />
+<p class="quote">Useful for Kitchen use <br>$113<br><button>Buy Now</button></p>
+</div>
+<div class="entry">
+<p class="name">Wall AC</p>
+<img src="https://4.imimg.com/data4/HE/PR/MY-8668173/room-wall-air-conditioner-500x500.jpg" alt="Smiling person" />
+<p class="quote">Useful for Large Halls <br>$514<br><button>Buy Now</button></p>
+</div>
+<div class="entry">
+<p class="name">Small Air Conditionar</p>
+<img src="https://i5.walmartimages.com/asr/47740d58-c4e8-4b8e-9690-a4a76c2af516.a154df464ba6aa011943873dd8d22dba.jpeg" alt="Smiling person" />
+<p class="quote">Useful for table work <br>$110<br><button>Buy Now</button></p>
+</div>
+<div class="entry">
+<p class="name">Wall Automatic AC</p>
+<img src="https://cgaxisimages.fra1.cdn.digitaloceanspaces.com/2014/08/cgaxis_models_12_08_011.jpg" alt="Smiling person" />
+<p class="quote">Useful for offices or labs <br>$613<br><button>Buy Now</button></p>
+</div>
+<div class="entry">
+<p class="name">Small AC</p>
+<img src="https://cdnp2.stackassets.com/cf345677a1d058fd3108174f2a3cb9253e66050d/store/opt/596/447/344f7713417659ed6b3bf67ff1bba0d3254de4b3608fac4476187a7b7fcd/product_39874_product_shots1.jpg" alt="Smiling person" />
+<p class="quote">Occupy Small space <br>$121<br><button>Buy Now</button></p>
+</div>
+<div class="entry">
+<p class="name">AC cooler</p>
+<img src="https://5.imimg.com/data5/JL/DP/MY-3629302/portable-air-conditioner-500x500.jpg" alt="Smiling person" />
+<p class="quote">Useful for Daily use <br>$311<br><button>Buy Now</button></p>
+</div>
+</div>
+</div>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+{% endblock %}

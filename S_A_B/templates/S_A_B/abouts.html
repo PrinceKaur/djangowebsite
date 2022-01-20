@@ -1,0 +1,372 @@
+{% extends 'S_A_B/basic.html' %}
+{% block body %} 
+<!-- Main navigation -->
+{% load static %}
+        <header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'myfun' %}">Back
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'home' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <!-- Full Page Intro -->
+          <div class="view" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient align-items-center">
+              <!-- Content -->
+              <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                    <h1 class="h1-responsive font-weight-bold mt-sm-5">ABOUT US<hr><br>Make purchases or selling with our app </h1>
+                    <hr class="hr-light">
+                    <h6 class="mb-4">SAB means selling and purchashing of any kinds of products without any problem.we provide you a plateform for selling you products as well as purchasing of newones with resonable prices.
+                    </h6>
+                    <a class="btn btn-white">Download</a>
+                    <a class="btn btn-outline-white" href="{% url 'intro' %}">Learn more</a>
+                  </div>
+                  <!--Grid column-->
+                  <!--Grid column-->
+                  <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                    <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid">
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+          <!-- Full Page Intro -->
+        </header>
+        <!-- Main navigation -->
+        <!--Main Layout-->
+        <!-- <main> 
+          <div class="container">
+            Grid row
+            <div class="row py-5">
+              Grid column
+              <div class="col-md-12 text-center">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              Grid column
+            </div>
+            Grid row
+          </div>
+        </main>
+         Main Layout-->
+<!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4">
+
+ 
+  <!-- extra -->
+  <div class='container-fluid'>
+    <div class="card">
+        <div class="heading text-center">
+            <div class="head1">Just Stay Home And Shop And Sell Online</div>
+            <p class="bdr"></p>
+        </div>
+        <div class="card-body">
+            <div class="row m-0 pt-5">
+                <div class="card col-12 col-md-3">
+                    <div class="card-content"> <i class="fas fa fa-bank fa-3x"></i>
+                        <div class="card-title"> PAY SAFELY CUSTOMER </div>
+                        <p><small>Save customers' cards for future phone orders</small></p>
+                        <div class="learn-more">
+                            <p> <small> LEARN MORE <label><i class="fas fa fa-angle-right"></i></label> </small> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-12 col-md-3">
+                    <div class="card-content"> <i class="fas fa fa-handshake-o fa-3x"></i>
+                        <div class="card-title"> ACCEPT ELECTRONIC CHECK </div>
+                        <p><small>Save customers' times of payments</small></p>
+                        <div class="learn-more">
+                            <p> <small> LEARN MORE <label><i class="fas fa fa-angle-right"></i></label> </small> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-12 col-md-3">
+                    <div class="card-content"> <i class="fas fa fa-mobile fa-3x"></i>
+                        <div class="card-title"> STREAMLINE PHONE PAYMENTS </div>
+                        <p><small>Make Your payments more easily</small></p>
+                        <div class="learn-more">
+                            <p> <small> LEARN MORE <label><i class="fas fa fa-angle-right"></i></label> </small> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-12 col-md-3">
+                    <div class="card-content"> <i class="fas fa fa-user-secret fa-3x"></i>
+                        <div class="card-title"> STAY<br /> SECURE </div>
+                        <p><small>Provide Security for your Data</small></p>
+                        <div class="learn-more">
+                            <p> <small> LEARN MORE <label><i class="fas fa fa-angle-right"></i></label> </small> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div><br><br>
+<!-- extra2 -->
+<!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+  <!--Controls-->
+  <div class="controls-top">
+    <a class="btn-floating h3" href="#multi-item-example" data-slide="prev"><i class="fas fa fa-chevron-left"> Our Popular Products</a></i>
+    <a class="btn-floating h3" href="#multi-item-example" data-slide="next"><i
+        class="fas fa fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
+
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+    <li data-target="#multi-item-example" data-slide-to="1"></li>
+    
+    
+  </ol>
+  <!--/.Indicators-->
+
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+
+    <!--First slide-->
+<div class="carousel-item active">
+
+      <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://images.indianexpress.com/2018/02/re-new.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Luxury Bike</h4>
+            <p class="card-text">$1549<br>Enjoy Rides On It never get bored.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://www.makeup4all.com/wp-content/uploads/2014/09/Aerin-Makeup-Collection-for-Fall-2014-promo.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Makeup Kit</h4>
+            <p class="card-text">$40<br>Explore your Beauty with heavy Discount</p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://i.ytimg.com/vi/dip_8dmrcaU/maxresdefault.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Luxury Car</h4>
+            <p class="card-text">$1689<br>Enjoy Luxury Rides.Have a safe journey.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col-md-3" style="float:right">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://dailytimes.com.pk/assets/uploads/2017/10/17/electronic-items.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Home Appliances</h4>
+            <p class="card-text">$559<br>Make your life easy and happy.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    <!--/.First slide-->
+</div>
+    <!--Second slide-->
+    <div class="carousel-item">
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://cdn.mos.cms.futurecdn.net/paERH3Bt7sH5yW8rop57cH-1200-80.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Canon Camera</h4>
+            <p class="card-text">$230<br>Capture your Special Moments with camera.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://www.springwestacademy.org/wp-content/uploads/2021/01/Laptop.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Laptop</h4>
+            <p class="card-text">$500<br>With high Storage Capacity & Latest Window.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://images.indianexpress.com/2019/09/toys.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Toys</h4>
+            <p class="card-text">$20<br>Lots of Learning Happiness for you child.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://c.tribune.com.pk/2020/04/4-1585768938.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Womens Fashion</h4>
+            <p class="card-text">$200<br>Latest Fashion ones you try it .
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    
+    <!--/.Second slide--></div>
+  </div>
+     <hr>
+
+  <!-- Call to action -->
+  <ul class="list-unstyled list-inline text-center py-2">
+    <li class="list-inline-item">
+      <h5 class="mb-1">Register for free</h5>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="btn btn-danger btn-rounded">Sign up!</a>
+    </li>
+  </ul>
+  <!-- Call to action -->
+
+
+
+</footer>
+<!-- Footer -->
+
+      
+  
+    <hr class="rgba-white-light" style="margin: 0 15%;">
+
+    <!-- Grid row-->
+    <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+
+      <!-- Grid column -->
+      <div class="col-md-8 col-12 mt-5">
+        <p style="line-height: 1.7rem">SAB Selling and Buying of any kind of Products .you acan buy as well as purchase on 
+        this site .you can now easily sell your old or new products easily from home .Payments are also easy
+        for you,So just visit our site and enjoy our services.Hope our site will be helpful for you all.SAB(selling and Buying) </p>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+    <!-- Grid row -->
+    <div class="row d-flex align-items-center">
+
+      <!-- Grid column -->
+      <div class="col-md-7 col-lg-8">
+
+        <!--Copyright-->
+        <p class="text-center text-md-left">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/">
+            <strong> SAB.com</strong>
+          </a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-5 col-lg-4 ml-lg-0">
+
+        <!-- Social buttons -->
+        <div class="text-center text-md-right">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a class="btn-floating btn-sm rgba-white-slight mx-1 ">
+               <h4> <i class="fas fa fa-facebook"></i></h4>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-sm rgba-white-slight mx-1">
+              <h4>  <i class="fas fa fa-twitter"></i></h4>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-sm rgba-white-slight mx-1">
+              <h4>  <i class="fas fa fa-google-plus"></i></h4>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-sm rgba-white-slight mx-1">
+              <h4>  <i class="fas fa fa-linkedin"></i></h4>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+    
+</footer>
+<!-- Footer -->
+{% endblock %}

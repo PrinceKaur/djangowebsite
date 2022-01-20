@@ -1,0 +1,458 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+/* ----categories--- */
+.categories{
+    margin: 50px 250px;
+    width: 845px;
+
+}
+.categories img{
+    width: 100%;
+    padding: 20px 0;
+    transition: 1s;
+    cursor: pointer;
+}
+.categories img:hover{
+    transform: scale(1.1);
+}
+.product4-btns{
+    display: flex;
+    justify-content: center;
+     margin-top:-"10px";
+}
+.categories:hover .product4-btns{
+    opacity: 1;
+}
+* watches */
+.product{
+  width: 100%;
+  background-color: rgb(0 0 0 / 8%);
+  box-shadow: 2px 2px 30px rgba(225, 223, 241, 0.2);
+  display: flex;
+  margin:30px auto;
+  flex-direction: column;
+  align-items: center;
+  padding:40px 20px;
+  margin-top: -60px;
+  position: relative;
+  border-radius: 10px;
+ 
+}
+ .p-heading{
+  margin:20px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+}
+.p-heading h3{
+  font-family: myriad pro;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size:2rem;
+  color:#323543;
+ 
+}
+.p-heading h3 font{
+  color:#8c84f9;
+}
+.product-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+  width:100%;
+}
+.p-box{
+  width:250px;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+  position: relative;
+  margin: 10px 30px;
+}
+.p-box img{
+  height:180px;
+}
+.p-box p{
+  color: #080808;
+  font-family: myriad pro;
+  font-size: 0.9rem;
+  letter-spacing: 0.5;
+}
+ span{
+    color: #1d2124;
+    font-size: 20px;
+}
+
+.price{
+  color:#2c2c2c;
+  font-family: poppins;
+  font-size: 1rem;;
+}
+.buy-btn{
+  position: absolute;
+  width:140px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:calibri;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+  border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+  background:linear-gradient(
+        120deg ,#2c4556 20%,#3295a5);
+  color:#FFFFFF;
+  display: none;
+  animation: fade 0.2s;
+}
+.p-box:hover .buy-btn{
+  display: flex;
+}
+.p-box:hover{
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+  background-color:#FFFFFF;
+}
+.p-box:hover .price{
+  color:#f70b0b;
+  transition: all ease 0.2s;
+}
+.p-box a:hover {
+    color: #e9ecef;
+    text-decoration: none;
+}
+@keyframes fade{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+ 
+.our-brand{
+  display: flex;
+  width: 85%;
+  margin:30px auto;
+  justify-content: space-around;
+  align-items: center;
+  padding:30px;
+}
+.brand-text{
+  width:40%;
+  font-family:myriad pro;}
+.brand-img{
+  height: 500px;
+  width: 50%;
+  box-sizing: border-box;
+}
+.brand-img img{
+  width:100%;
+  height: 100%;
+  object-fit:contain;
+}
+.brand-text h3{
+  color:#333333;
+  font-weight: 700;
+  font-size:3rem;
+  margin:0px;
+}
+.brand-text h4{
+  color: #333333;
+  font-weight: 400;
+  font-size:2rem;
+  margin:0px;
+}
+.brand-text font{
+  color:#8d83f9;
+}
+.brand-text p{
+  font-size: 1rem;
+  color:#bdbdbd;
+  letter-spacing: 0.5px;
+}
+.subcribe-container{
+width:100%; 
+height:250px;
+margin-bottom:30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-bottom: 2px solid rgba(0,0,0,0.03);
+}
+.subcribe-container h3{
+font-size: 2rem;
+color: rgb(56, 56, 56);
+}
+.subcribe-input{
+  width:500px;
+  background-color: #fff;
+  border-radius: 7% 7% 7% 7% / 50% 50% 50% 50%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:20px;
+  box-shadow: 2px 5px 30px rgba(0,0,0,0.1);
+}
+.subcribe-input input{
+  width:100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.subcribe-btn{
+  width:120px;
+  height: 40px;
+  background-color: #202020;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+  font-size: 1rem;
+}
+.subcribe-btn:hover{
+  background-color:#6b60ec;
+  transition: all  ease 0.5s;
+}
+
+
+@media(max-width:1045px){
+  
+.our-brand{
+  flex-direction:column-reverse;
+}
+.brand-text,.brand-img{
+  width:100%;
+}
+.brand-img{
+  height:300px;
+  margin:20px;
+}
+}
+@media(max-width:600px){
+  
+   .product{
+     width:88%;
+   }
+   .p-box{
+    margin:20px 10px;
+    padding:10px 20px;
+     width:100%;
+     text-align: center;
+   }
+   .subcribe-input{
+    width:95%;
+  }
+  .subcribe-container h3{
+    font-size:1.4rem;
+    text-align: center;
+  }
+   
+}
+#hi{background-color: pink;}
+{% endblock %}
+{% block body %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact1' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+          <h2 class="text-warning text-center"><u>Our Best Cosmo Collections</h2></u>
+     <!-- product -->
+<section class="categories">
+<div class="row">
+  <div class="col-md-4">
+    <img src="https://i.pinimg.com/originals/cc/10/1b/cc101b014e6b43cda9e9a991724d308b.jpg" alt="image">
+    <div class="product4-btns">
+      <button type="button" class="btn-cart" >Add to Cart
+        <span><i class="fa fa-plus"></i></span>
+      </button>
+      </div>
+  </div>
+  <div class="col-md-4">
+    <img src="https://media.glamour.com/photos/5a1de34699af577444a4bc47/master/w_400%2Cc_limit/fenty-lipsticks.jpg" alt="image">
+    <div class="product4-btns">
+      <button type="button" class="btn-cart" >Add to Cart
+        <span><i class="fa fa-plus"></i></span>
+      </button>
+      </div>
+  </div>
+  <div class="col-md-4">
+    <img src="https://www.beautivista.com/wp-content/uploads/2018/12/4pcs-satin-eye-makeup-set-4-eyes-type-sets-julailas-cosmetics-health-beauty-product-design_582_1024x1024@2x.jpg" alt="image">
+    <div class="product4-btns">
+      <button type="button" class="btn-cart" >Add to Cart
+        <span><i class="fa fa-plus"></i></span>
+      </button>
+      </div>
+  </div>
+  <div class="col-md-4">
+    <img src="https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/cosmetics/node_2804/article/2018/10/19/israel-s-beauty-market-innovative-cosmetic-products-and-ingredients/8738504-1-eng-GB/Israel-s-beauty-market-innovative-cosmetic-products-and-ingredients.jpg" alt="image">
+    <div class="product4-btns">
+      <button type="button" class="btn-cart" >Add to Cart
+        <span><i class="fa fa-plus"></i></span>
+      </button>
+      </div>
+  </div>
+  <div class="col-md-4">
+    <img src="https://previews.123rf.com/images/zeinousstudio/zeinousstudio2001/zeinousstudio200100058/139073848-cosmetic-product-vector-advertising-banner-cosmetics-mock-up-bottle-of-whitening-lotion-and-sun-prot.jpg" alt="image">
+    <div class="product4-btns">
+      <button type="button" class="btn-cart" >Add to Cart
+        <span><i class="fa fa-plus"></i></span>
+      </button>
+      </div>
+  </div>
+  <div class="col-md-4">
+    <img src="https://hw-media.herworld.com/public/2017/12/story/60728774_l.jpg" alt="image">
+    <div class="product4-btns">
+      <button type="button" class="btn-cart" >Add to Cart
+        <span><i class="fa fa-plus"></i></span>
+      </button>
+      </div>
+  </div>
+  </div>
+</section>
+
+
+    <!-- purses -->
+  <section class="product">
+    <!--heading------------>
+    <div class="container" style="margin-top: 150px; color: crimson; ">
+    <h3 class="text-center"> <u>TRENDY  PRODUCTS</h3></u>
+    </div>
+    <!--product-container----------------->
+    <div class="product-container">
+    <!--box-1------------>
+    <div class="p-box">
+    <img alt="1" src="https://static6.depositphotos.com/1105977/656/i/950/depositphotos_6565955-stock-photo-make-up-accessories.jpg" />
+    <!--price--->
+    <span>$52.3</span>
+    <!--buy-btn-->
+    <a class="buy-btn" href="#">Add To Cart</a>
+    </div>
+    <!--box-2------------>
+    <div class="p-box">
+    <img alt="2" src="https://expertphotography.com/wp-content/uploads/2019/07/makeup-photography-creative-ideas-lip-crayons-with-smudges.jpg" />
+    
+    <!--price--->
+    <span>$.62.3</span>
+    <!--buy-btn-->
+    <a class="buy-btn" href="#">Add To Cart</a>
+    </div>
+    <!--box-3------------>
+    <div class="p-box">
+    <img alt="3" src="https://images.squarespace-cdn.com/content/v1/524bebefe4b0bf732ffcc808/1578391779542-NHT5PRGCATINZHCFKSBN/ke17ZwdGBToddI8pDm48kJUlZr2Ql5GtSKWrQpjur5t7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UfNdxJhjhuaNor070w_QAc94zjGLGXCa1tSmDVMXf8RUVhMJRmnnhuU1v2M8fLFyJw/Beauty_Pie_Social_Content.jpg" />
+    
+    <!--price--->
+    <span>$.23.3</span>
+    <!--buy-btn-->
+    <a class="buy-btn" href="#">Add To Cart</a>
+    </div>
+     
+    <!--box-4------------>
+    <div class="p-box">
+    <img alt="4" src="https://i.pinimg.com/originals/2f/de/d0/2fded0569918e9b274c66bc1d5475214.jpg" />
+    <!--price--->
+    <span>$.27.3</span>
+    <!--buy-btn-->
+    <a class="buy-btn" href="#">Add To Cart</a>
+    </div>
+    <!--box-5------------>
+    <div class="p-box">
+    <img alt="5" src="https://5.imimg.com/data5/PP/GG/WB/SELLER-41868082/huda-beauty-glitter-and-mirror-nail-polish-pack-of-24--500x500.jpg" />
+
+    <!--price--->
+    <span>$.13.3</span>
+    <!--buy-btn-->
+    <a class="buy-btn" href="#">Add To Cart</a>
+    </div>
+    <!--box-6------------>
+    <div class="p-box">
+    <img alt="6" src="https://www.richbeganyphoto.com/wp-content/uploads/2017/04/BrushKit2-060-11x14.jpg" />
+    
+    <!--price--->
+    <span>$.12.3</span>
+    <!--buy-btn-->
+    <a class="buy-btn" href="#">Add To Cart</a>
+    </div>
+    <!--box-4------------>
+    <div class="p-box">
+    <img alt="4" src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2019/03/DPS-Makeup-Essentials-Pt1_07.jpg" />
+    <!--price--->
+    <span>$.52.3</span>
+    <!--buy-btn-->
+    <a class="buy-btn" href="#">Add To Cart</a>
+    </div>
+    <!--box-5------------>
+    <div class="p-box">
+    <img alt="5" src="https://cdn.shopify.com/s/files/1/0320/2157/7772/products/oh-my-magenta_600x.jpg" />
+
+    <!--price--->
+    <span>$.23.3</span>
+    <!--buy-btn-->
+    <a class="buy-btn" href="#">Add To Cart</a>
+    </div>
+    </section>
+
+<!-- footwear -->
+<div class="container">
+  
+  <div class="left">
+      <img src="https://thumbs.dreamstime.com/b/makeup-beauty-online-shopping-concept-cosmetic-products-business-basket-pastel-pink-background-208805302.jpg">
+  </div>
+  <div class="right">
+    <h1>Best Festival Offers</h1>
+    <p>
+      We are providing best quality materials. We have best quality cosmo products,for womens.
+    </p>
+    <p>
+      50% Discount!!!
+    </p>
+</div></div>
+  </div>
+</div>
+</header>
+{% endblock %}

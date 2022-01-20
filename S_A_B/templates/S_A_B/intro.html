@@ -1,0 +1,132 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+#hi{background-color: pink;}
+{% endblock %}
+{% block body %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact1' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+
+		<u><h1 class="text-center text-primary">ABOUT US</h1></u>
+		
+	
+	<!-- Card );">-->
+<div class="card card-image" style="background-image: url(https://images.theconversation.com/files/351878/original/file-20200810-22-przb4a.jpg);background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+    <!-- Content -->
+    <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+        <div>
+            <h4 class="text-danger h2"><span><i class="fas fa fa-angellist"></i> SAB</h4></span>
+            <h3 class="card-title pt-2 text-warning text-center"><strong>Selling And Buying</strong></h3>
+            <p class="text-warning">we starting this site for the users to provide them a platform.
+            where you can buy as well as sell Products According to your need.Latest Fashion and Designing Products 
+        available</p>
+            <a class="btn btn-success"><i class="fas fa fa-clone left"></i> View More </a>
+        </div>
+    </div>
+    <!-- Content -->
+</div>
+<!-- Card -->
+
+	
+<!--Projects section v.4-->
+<section>
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-5 text-warning">Our best projects</h2>
+    <!-- Section description -->
+    <p class="grey-text text-center w-responsive mx-auto mb-5 text-primary">We are providing a platform to sell and purchase any kind of products without any problem. we are dealing with customers problems and issues our team is always ready to solve customers problem. </p>
+
+    <!--Grid row-->
+    <div class="row mx-1">
+
+        <!--Grid column-->
+        <div class="col-md-12 mb-4">
+            <div class="card card-image" style="background-image: url(https://cdn2.vectorstock.com/i/1000x1000/96/46/home-delivery-service-online-shopping-vector-30239646.jpg);background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                    <div>
+                        <h4 class="text-danger"><i class="fas fa fa-plane"></i><strong> Travel</strong></h4>
+                        <h3 class="card-title py-3 font-weight-bold text-warning"><strong>Order Deliver To You</strong></h3>
+                        <p class="pb-3 text-warning">Products deliver at time.Delivery Partners always Ready to deliver order
+                            Cash on Delivery also or Payments can be done through online mode or net baking.Stay Home Stay Safe 
+                            Your Products will reach you.<p>
+                        <a class="btn btn-secondary btn-rounded"><i class="fas fa fa-clone left"></i> View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+            <div class="card card-image" style="background-image: url(https://img.etimg.com/thumb/msid-62400436,width-640,resizemode-4,imgsize-285859/more-likely-to-use-mobile-apps-for-research.jpg);background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                    <div>
+                        <h4 class="text-danger"><i class="fas fa fa-money"></i><strong> Marketing</strong></h4>
+                        <h3 class="card-title py-3 font-weight-bold text-primary"><strong>Provide Marketing Platform</strong></h3>
+                        <p class="pb-3 text-primary">we are just explore the plateform for users for online marketing
+                        ,that anyone can sell their products easily online and earn money from home.</p>
+                        <a class="btn btn-success btn-rounded"><i class="fas fa fa-clone left"></i> View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+            <div class="card card-image" style="background-image: url(https://img.etimg.com/thumb/width-640,height-480,imgsize-1361096,resizemode-1,msid-71577875/wealth/spend/8-ways-to-bag-better-deals-while-shopping-online/online-shopping-getty-12.jpg);background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                    <div>
+                        <h4 class="text-danger"><i class="fas fa fa-eye"></i><strong> Security</strong></h4>
+                        <h3 class="card-title py-3 font-weight-bold text-primary"><strong>Provide Security </strong></h3>
+                        <p class="pb-3 text-primary">we provide security for safe payments and your details.your personal details 
+                        were safe .this is a safe platform for any kind of users.</p>
+                        <a class="btn btn-success btn-rounded"><i class="fas fa fa-clone left"></i> View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+</section>
+<!--Projects section v.4-->
+{% endblock %}

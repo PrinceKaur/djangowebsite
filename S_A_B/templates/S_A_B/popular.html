@@ -1,0 +1,523 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+#hi{background-color: pink;}
+{% endblock %}
+{% block body %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+
+<h1 class="text-center text-primary"> <u>Popular Products</h1></u>
+
+<!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+  <!--Controls-->
+  <div class="controls-top">
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+        class="fas fa fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
+
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+    <li data-target="#multi-item-example" data-slide-to="1"></li>
+    <li data-target="#multi-item-example" data-slide-to="2"></li>
+    <li data-target="#multi-item-example" data-slide-to="3"></li>
+    
+  </ol>
+  <!--/.Indicators-->
+
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+
+    <!--First slide-->
+    <div class="carousel-item active">
+
+      <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://images.indianexpress.com/2018/02/re-new.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Luxury Bike</h4>
+            <p class="card-text">$1549<br>Enjoy Rides On It never get bored.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://www.makeup4all.com/wp-content/uploads/2014/09/Aerin-Makeup-Collection-for-Fall-2014-promo.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Makeup Kit</h4>
+            <p class="card-text">$40<br>Explore your Beauty with heavy Discount</p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://i.ytimg.com/vi/dip_8dmrcaU/maxresdefault.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Luxury Car</h4>
+            <p class="card-text">$1689<br>Enjoy Luxury Rides.Have a safe journey.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col-md-3" style="float:right">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://dailytimes.com.pk/assets/uploads/2017/10/17/electronic-items.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Home Appliances</h4>
+            <p class="card-text">$559<br>Make your life easy and happy.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+<!-- second line -->
+ <div class="col-md-3" style="float:right">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://stylesatlife.com/wp-content/uploads/2020/03/Modern-Hall-Decoration-Ideas.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Decoration Material</h4>
+            <p class="card-text">$30<br>Make you special day more special with decoration.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:right">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://www.completecar.ie/img/testdrives/10313_large.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Imported Car</h4>
+            <p class="card-text">$1798<br>Fell like a king.Travel as long as you can.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://manofmany.com/wp-content/uploads/2016/02/what-people-need-to-know-about-mens-fashion-week.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Mens Jackets</h4>
+            <p class="card-text">$600<br>Feel warm in cool winter days with comfortable jackets.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://images.jdmagicbox.com/comp/def_content/bag-dealers/shutterstock-528996292-bag-dealers-16-906or.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Trendy Bags</h4>
+            <p class="card-text">$60<br>Bags comfortable as well as stylish.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+<!-- end second line -->
+    </div>
+    <!--/.First slide-->
+
+    <!--Second slide-->
+    <div class="carousel-item">
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://cdn.mos.cms.futurecdn.net/paERH3Bt7sH5yW8rop57cH-1200-80.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Canon Camera</h4>
+            <p class="card-text">$230<br>Capture your Special Moments with camera.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://www.springwestacademy.org/wp-content/uploads/2021/01/Laptop.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Laptop</h4>
+            <p class="card-text">$500<br>With high Storage Capacity & Latest Window.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://images.indianexpress.com/2019/09/toys.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Toys</h4>
+            <p class="card-text">$20<br>Lots of Learning Happiness for you child.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://c.tribune.com.pk/2020/04/4-1585768938.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Womens Fashion</h4>
+            <p class="card-text">$200<br>Latest Fashion ones you try it .
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+<!-- second line -->
+ <div class="col-md-3" style="float:right">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://thebobbypen.com/wp-content/uploads/2015/05/pile-of-makeup-thebobbypen.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Makeup </h4>
+            <p class="card-text">$30<br>Make you More Beautiful and Charming.
+              .</p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:right">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://cdn.packhacker.com/2019/05/amazonbasics-slim-travel-backpack-weekender-in-detroit-michigan-1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Carry Bags</h4>
+            <p class="card-text">$15<br>Carry you clothes or laptop in a single bag.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://ds393qgzrxwzn.cloudfront.net/cat1/img/images/0/zuJ1yQ9QqU.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Gym quipment</h4>
+            <p class="card-text"> $150<br>Make your life more Healthy and Happy,fit Yourself.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://s3-eu-west-1.amazonaws.com/sosnewbucketforlive/blog_img/sherwanis+for+men.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Mens Traditonal</h4>
+            <p class="card-text">$250<br>Make your Traditional Moments more lovable .
+              .</p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+<!-- end second line -->
+    </div>
+    <!--/.Second slide-->
+<!--Third slide-->
+    <div class="carousel-item">
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://thumbor.thedailymeal.com/2sdT7VpTJlM1CzO699XtYxOSZb4=/870x565/filters:focal(1001x496:1002x497)/https://www.thedailymeal.com/sites/default/files/story/2018/iStock-536685288.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">kitchen Appliances</h4>
+            <p class="card-text">$40<br>Make Healthy Food Stay fit and Safe.
+              </p>
+            <a class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://thumbs.dreamstime.com/b/beautiful-wedding-evening-dresses-beautiful-wedding-evening-dresses-hanging-rack-shop-125992272.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Dresses</h4>
+            <p class="card-text">$99<br>Pretty Dresses for your Pretty Princess.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://www.extraspace.com/blog/wp-content/uploads/2018/06/home-fitness-room-extra-bedroom.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Gym Instruments</h4>
+            <p class="card-text">$450<br>Stay Fit stay Safe Stay Happy.
+             .</p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://www.grandweddings.co.in/wp-content/uploads/2020/03/indian-wedding-stage-decoration-photos-magnificent-portrait-7.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">wedding Decoration</h4>
+            <p class="card-text">$50<br>Decorate your Moments with Beautiful Decorations.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+<!-- second line -->
+ <div class="col-md-3" style="float:right">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://www.topendsports.com/fitness/images/pedometers-pixabay.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Digital Watches</h4>
+            <p class="card-text">$70<br>Digitalize your life,More Comfortable.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:right">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://cms-cdn.thesolesupplier.co.uk/2019/01/Nike-Adapt-BB-Black-White-AO2582-001.png" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Designing Shoes</h4>
+            <p class="card-text">$20<br>Walk Comfortably and Fell Comforatble all the Time.
+             </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://i.ytimg.com/vi/kjjP6PH7vCY/maxresdefault.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Kids Traditional</h4>
+            <p class="card-text">$100<br>Special Dresses for Special Kids.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://smhttp-ssl-18667.nexcesscdn.net/8090D3/magento/media/catalog/product/C/M/CM1738EX-CM7905EXP-br-set-1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Modern Furniture</h4>
+            <p class="card-text">$200<br>Decorate your Home with Modern Furniture.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+<!-- end second line -->
+    </div>
+    <!--/.Third slide-->
+
+   <!--Fourth slide-->
+    <div class="carousel-item ">
+
+      <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://k8q7r7a2.stackpathcdn.com/wp-content/uploads/2017/12/Buying-Guide-5-Luxury-Sports-Watches-of-2017-Audemars-Piguet-Royal-Oak-QP-Ceramic.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title"> Stylish Watch</h4>
+            <p class="card-text">Make your look more stylish and Fashionable.
+             </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://images.squarespace-cdn.com/content/v1/54c6abb5e4b080a460dc747c/1555049956768-QPJW5WNQHG02AJVCIPI8/ke17ZwdGBToddI8pDm48kG87Sfbgg29A4BYEDq3OXvgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcf4OxbJOyh_wHUnyc4kQLQ6SBshRGOku7c30Y_IRDNPta8R2IY5BHMaEj1zOWoDTZ/seoulkidsfashionshow.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Kids FAshion</h4>
+            <p class="card-text">$99<br>Stylish look for your Cute kids.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://cdn.shopify.com/s/files/1/1890/8745/files/retro_style_wooden_furniture_range_1400x.progressive.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Furniture</h4>
+            <p class="card-text">$80<br>
+              Comfortable Furniture Make yourself More Comfortable.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://sneakernews.com/wp-content/uploads/2018/02/nike-lebron-15-equality-how-to-buy.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Trendy Shoes</h4>
+            <p class="card-text">$40<br>
+              Shoes that is Trendy as well as Comfortable.
+             </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+<!-- second line -->
+ <div class="col-md-3" style="float:right">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://cdn.shopify.com/s/files/1/1989/2983/products/Car.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Luxury Car</h4>
+            <p class="card-text">$1346
+              Enjoy Long Drive through luxury car ,Luxury Rides.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:right">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://www.studenttimes.org/wp-content/uploads/2020/07/shutterstock_681809980-1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Musical Instruments</h4>
+            <p class="card-text">$50<br>Fell the Music and Enjoy it Playing.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://media.designcafe.com/wp-content/uploads/2020/08/19105344/diy-party-decoration-ideas-for-home.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Decorations</h4>
+            <p class="card-text">$36<br>Decorates You Home and special Moments and make your Moments Memorable.
+              </p>
+            <a class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://www.businessinsider.in/thumb/msid-73999395,width-600,resizemode-4,imgsize-112984/business/auto/article/checkout-new-and-upcoming-electric-bikes-in-india/hero-electric-ae-47.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Bike</h4>
+            <p class="card-text">Stylish and Luxury Bike,Enjoy Rides on it.
+              .</p>
+            <a class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+
+<!-- end second line -->
+    </div>
+    <!--/.Fourth slide-->
+
+  </div>
+  <!--/.Slides-->
+
+</div>
+<br><br>
+<!--/.Carousel Wrapper-->
+<p class="text-center h3 text-primary"><u>Search and select product that you wants</p></u>
+ 
+{% endblock %}

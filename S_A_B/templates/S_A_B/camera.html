@@ -1,0 +1,243 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+.box
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+.card
+{
+    margin-top: 80px;
+    height: 300px;
+    transition: 0.5s;
+}
+.card:hover
+{
+    border: 1px solid red;
+    border-radius: 30px;
+}
+.card .cardImg
+{
+    height: 150px;
+    width: 90%;
+    position: relative;
+    top: -15px;
+    left: 5%;
+}
+.card .cardImg img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.card .info
+{
+    text-align: center;
+}
+.card .info h3
+{
+    color: rgb(70, 66, 66);
+}
+.card .info p
+{
+    color: rgb(41, 201, 49);
+}
+
+.ligne
+{
+    display: flex;
+}
+#hi{background-color: pink;}
+
+{% endblock %}
+{% block body %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact1' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+<h2 class=" text-success"><marquee direction="down"class="text-center">CAMERA TO CAPTURE YOUR MOMENTS!</h2></marquee>
+ <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://process.filepicker.io/APHE465sSbqvbOIStdwTyz/rotate=deg:exif/resize=fit:crop,height:283,width:472/output=quality:80,compress:true,strip:true,format:jpg/cache=expiry:max/https://cdn.filestackcontent.com/ACv9Oqa9S9mE60I0a99e" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>CANON EOS R6</h3>
+                        <p><span>$</span>156</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://s.yimg.com/uu/api/res/1.2/yBC9PQkZp5qKkXztnCbNKQ--~B/aD0xMDEyO3c9MTgwMDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2021-04/38873c20-a2d6-11eb-8f76-872d6dab64df.cf.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>SONY CAMERA</h3>
+                        <p><span>$</span>585</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://specials-images.forbesimg.com/imageserve/5d61d3cefead280008920df3/960x0.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>NIKON CAMERA</h3>
+                        <p><span>$</span>344</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://sm.pcmag.com/pcmag_in/guide/t/the-best-d/the-best-digital-cameras-for-2021_tqqn.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>FUJIFILM</h3>
+                        <p><span>$</span>249</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Canon_PowerShot_A95_-_front_and_back.jpg" alt="...">
+                        
+                    </div>
+                    <div class="info">
+                        <h3>CANON SMALL CAMERA</h3>
+                        <p><span>$</span>153</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://mdi.am/wp-content/uploads/2020/03/lens-3143893_1920.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>CINEMATIC CAMERA</h3>
+                        <p><span>$</span>679</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://media.croma.com/image/upload/v1607170726/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/gktfdpnqpuiyhlsfrpgk.png" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>INSTAX MINI</h3>
+                        <p><span>$</span>132</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/114A0/production/_113061807_gettyimages-90727891.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>OLYMPUS-35 ECR</h3>
+                        <p><span>$</span>257</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://static.wixstatic.com/media/633382_6bc896954a50475aa29e6d36e537297f~mv2.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>CINEMATIC LARGE</h3>
+                        <p><span>$</span>648</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://global.canon/ja/c-museum/wp-content/uploads/2021/02/cesc889_top.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>CANON CAMERA MUSEUM</h3>
+                        <p><span>$</span>735</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://images.blackmagicdesign.com/images/products/blackmagicpocketcinemacamera/landing/hero/hero-lg.jpg?_v=1620883804" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>BLACKMAGIC POCKET CINEMA</h3>
+                        <p><span>$</span>295</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="box card">
+                    <div class="box cardImg">
+                        <img src="https://i.pcmag.com/imagery/reviews/03D8CjWFYDEJvmNxGlPsxdH-58.1583353995.fit_lpad.size_625x365.jpg" alt="...">
+                    </div>
+                    <div class="info">
+                        <h3>FUJIFILM</h3>
+                        <p><span>$</span>286</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            </div></div>
+
+{% endblock %}

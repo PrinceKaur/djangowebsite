@@ -1,0 +1,232 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+figure {
+    margin: 0;
+    position: relative;
+}
+
+figure img {
+    max-width: 100%;
+    display: block;
+	position: relative;
+    z-index: 10;
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+figure:hover img {
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    -ms-transform: scale(0.4);
+    transform: scale(0.4);
+}
+
+figure:hover figcaption {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+figure a {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	padding: 20px;
+	background: #2c3f52;
+	color: #ed4e6e;
+	
+	-webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	transform: scale(0.7);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.4s;
+	transition: transform 0.4s, opacity 0.4s;
+}
+
+figcaption h3 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+figcaption span:before {
+	content: ' ';
+}
+
+figcaption a {
+    text-align: center;
+    padding: 3px 25px;
+    border-radius: 2px;
+    display: inline-block;
+    background: #ffc107;
+    color: #fff;
+}
+
+figcaption a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+#hi{background-color: pink;}
+{% endblock %}
+{% block body %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+
+<h2 class="text-center"><u>Mobile Phones</u></h2><br><br>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+		    <figure>
+                <img src="https://www.hayvine.com/featuredimages/1751271074.jpg" class="img-fluid" alt="img01">
+                <figcaption>
+                    <h3>Samsung</h3>
+                    <span>$4567</span>
+                    <a href="#">Buy Now</a>
+                </figcaption>
+            </figure>
+		</div>
+		<div class="col-sm-4">
+		    <figure>
+                <img src="https://imgk.timesnownews.com/story/iPhone_Xs_79_0.png" class="img-fluid" alt="img02">
+                <figcaption>
+                    <h3>Poco</h3>
+                    <span>$3780</span>
+                    <a href="#">Buy Now</a>
+                </figcaption>
+            </figure>
+		</div>
+		<div class="col-sm-4">
+		    <figure>
+                <img src="https://highxtar.com/wp-content/uploads/2021/03/tuhmb-highxtar-apple-iphone-13-max-pro-filtracion.jpg" class="img-fluid" alt="img03">
+                <figcaption>
+                    <h3>Apple Iphone</h3>
+                    <span>$8875</span>
+                    <a href="#">Buy Now</a>
+                </figcaption>
+            </figure>
+		</div>
+	</div>
+	<!-- extra -->
+	<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+		    <figure>
+                <img src="https://tiimg.tistatic.com/fp/1/006/365/mobile-phone-redmi-note-10--198.jpg" class="img-fluid" alt="img01">
+                <figcaption>
+                    <h3>Redmi Note10</h3>
+                    <span>$4678</span>
+                    <a href="#">Buy Now</a>
+                </figcaption>
+            </figure>
+		</div>
+		<div class="col-sm-4">
+		    <figure>
+                <img src="https://i.pinimg.com/originals/b1/3f/61/b13f614842debbe316c5e222ebd8189c.jpg" class="img-fluid" alt="img02">
+                <figcaption>
+                    <h3>Oppo</h3>
+                    <span>$5678</span>
+                    <a href="#">Buy Now</a>
+                </figcaption>
+            </figure>
+		</div>
+		<div class="col-sm-4">
+		    <figure>
+                <img src="https://4.imimg.com/data4/AY/BR/MY-94683/lenovo-mobile-phone-a1000-500x500.jpg" class="img-fluid" alt="img03">
+                <figcaption>
+                    <h3>Lenovo</h3>
+                    <span>$3468</span>
+                    <a href="#">Buy Now</a>
+                </figcaption>
+            </figure>
+		</div>
+	</div>
+	<!-- extra -->
+	
+	<div class="row">
+		<div class="col-sm-4">
+		    <figure>
+                <img src="https://static.straitstimes.com.sg/s3fs-public/styles/article_pictrure_780x520_/public/articles/2019/04/05/ak_s105g_0504.jpg" class="img-fluid" alt="img04">
+                <figcaption>
+                    <h3>Samsung 5G</h3>
+                    <span>$6479</span>
+                    <a href="#">Buy Now</a>
+                </figcaption>
+            </figure>
+		</div>
+		<div class="col-sm-4">
+		    <figure>
+                <img src="https://cdn.gsmarena.com/imgroot/news/19/05/oneplus-7-pro-almond/-727/gsmarena_002.jpg" class="img-fluid" alt="img05">
+                <figcaption>
+                    <h3>OnePlus 7 PRO</h3>
+                    <span>$5379</span>
+                    <a href="#">Buy Now</a>
+                </figcaption>
+            </figure>
+		</div>
+		<div class="col-sm-4">
+		    <figure>
+                <img src="https://www.choose.co.uk/img/editorial/700x464/img216267.jpg" class="img-fluid" alt="img06">
+                <figcaption>
+                    <h3>Iphone</h3>
+                    <span>$7398</span>
+                    <a href="#">Buy Now</a>
+                </figcaption>
+            </figure>
+		</div>
+	</div>
+
+</div>
+</body>
+{% endblock %}

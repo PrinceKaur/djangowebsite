@@ -1,0 +1,272 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+.item-image-wrapper {border: 1px solid #696969; overflow: hidden;margin-bottom: 30px;box-shadow: 3px 3px 5px 6px #ccc;}
+.single-items {position: relative;}
+.iteminfo {position: relative;}
+.iteminfo h2 {color: #FE980F;font-size: 24px; font-weight: 700;}
+.item-overlay {background: rgba(254, 152, 15, .8);top: 0; display: none;height: 0;position: absolute;-webkit-transition: height 500ms ease 0s;transition: height 500ms ease 0s;width: 100%;display: block;}
+.overlay-content { bottom: 0;  position: absolute; bottom: 0; text-align: center; width: 100%;}
+.item-overlay h2 {color: #fff;font-size: 24px; font-weight: 700;}
+.item-overlay p {font-size: 14px;font-weight: 400; color: #fff;}
+.item-overlay, .add-to-cart {background: #fff; border: 0 none; border-radius: 0; color: #FE980F;font-size: 15px;margin-bottom: 25px;}
+.choose { border-top: 1px solid #F7F7F0;}
+.choose ul li a {color: #B3AFA8;font-size: 13px;padding-left: 0;padding-right: 0;}
+.single-items:hover .item-overlay {display: block;  height: 100%;  background: rgba(254, 152, 15, .8);}
+.overlay-content {bottom: 0;position: absolute; bottom: 0; text-align: center; width: 100%;}
+.iteminfo img {    width: 100%;}
+#hi{background-color: pink;}
+{% endblock %}
+{% block body %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+
+<h2 class="text-center text-warning"><u>Toys For your Kids</u></h2><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+              <div class="item-image-wrapper">
+                <div class="single-items">
+                    <div class="iteminfo text-center">
+                      <img src="https://sc04.alicdn.com/kf/H602a2c3a0f874b4a8fe6204fbe59daa9r.jpg" alt="">
+                      <h2>$56</h2>
+                      <p>DOLLS</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                    <div class="item-overlay">
+                      <div class="overlay-content">
+                        <h2>$56</h2>
+                        <p>DOLLS</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="choose">
+                  <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="item-image-wrapper">
+                <div class="single-items">
+                    <div class="iteminfo text-center">
+                      <img src="https://4.imimg.com/data4/OR/VD/ANDROID-71790044/product-500x500.jpeg" alt="">
+                      <h2>$35</h2>
+                      <p>CARS</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                    <div class="item-overlay">
+                      <div class="overlay-content">
+                        <h2>$35</h2>
+                        <p>CARS</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="choose">
+                  <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="item-image-wrapper">
+                <div class="single-items">
+                    <div class="iteminfo text-center">
+                      <img src="https://rukminim1.flixcart.com/image/416/416/jjbqufk0/vehicle-pull-along/h/h/5/army-truck-toys-for-kids-military-truck-military-vehicle-army-original-imaf6v9cr23zne3v.jpeg" alt="">
+                      <h2>$56</h2>
+                      <p>TRUCK</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                    <div class="item-overlay">
+                      <div class="overlay-content">
+                        <h2>$56</h2>
+                        <p>TRUCK</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="choose">
+                  <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="item-image-wrapper">
+                <div class="single-items">
+                    <div class="iteminfo text-center">
+                      <img src="https://www.visitevasworld.co.uk/image_resize/crop/mw1500/mh750/products/1471/green-toys-train-recycled-toy.jpg" alt="">
+                      <h2>$45</h2>
+                      <p>TRAIN</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                    <div class="item-overlay">
+                      <div class="overlay-content">
+                        <h2>$45</h2>
+                        <p>TRAIN</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="choose">
+                  <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+              <div class="item-image-wrapper">
+                <div class="single-items">
+                    <div class="iteminfo text-center">
+                      <img src="https://5.imimg.com/data5/DG/FH/KL/SELLER-79356632/stuffed-toys-500x500.png" alt="">
+                      <h2>$35</h2>
+                      <p>TEDDY</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                    <div class="item-overlay">
+                      <div class="overlay-content">
+                        <h2>$35</h2>
+                        <p>TEDDY</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="choose">
+                  <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+    <div class="col-sm-3">
+              <div class="item-image-wrapper">
+                <div class="single-items">
+                    <div class="iteminfo text-center">
+                      <img src="https://static.turbosquid.com/Preview/2019/06/10__03_44_22/Thumbnail_41.png5F9058A9-6F01-4F25-A96A-51CCE479709FLarge.jpg" alt="">
+                      <h2>$55</h2>
+                      <p>WOODEN TOYS</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                    <div class="item-overlay">
+                      <div class="overlay-content">
+                        <h2>$55</h2>
+                        <p>WOODEN TOYS</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="choose">
+                  <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+    <div class="col-sm-3">
+              <div class="item-image-wrapper">
+                <div class="single-items">
+                    <div class="iteminfo text-center">
+                      <img src="https://images.jdmagicbox.com/quickquotes/images_main/b07lddhwb9-ktrs-diecast-model-cars-tesla-toy-cars-model-x-90-alloy-pull-back-toy-car-with-sound-and-amp-light-toy-kids-toys-158550860-lys3l.jpg" alt="">
+                      <h2>$35</h2>
+                      <p>REMOTE CAR</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                    <div class="item-overlay">
+                      <div class="overlay-content">
+                        <h2>$35</h2>
+                        <p>REMOTE CAR</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="choose">
+                  <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+    <div class="col-sm-3">
+              <div class="item-image-wrapper">
+                <div class="single-items">
+                    <div class="iteminfo text-center">
+                      <img src="http://sciencemadefun.net/blog/wp-content/uploads/2015/08/Project-Mc2-Doll-with-Experiment-Asst-FW-149.jpg" alt="">
+                      <h2>$56</h2>
+                      <p>DOLL</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                    <div class="item-overlay">
+                      <div class="overlay-content">
+                        <h2>$56</h2>
+                        <p>DOLL</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="choose">
+                  <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+  </div>
+</div>
+
+{% endblock %}

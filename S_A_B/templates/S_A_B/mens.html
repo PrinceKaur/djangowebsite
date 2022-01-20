@@ -1,0 +1,625 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
+
+/********************* shopping Demo-1 **********************/
+.product-grid{font-family:Raleway,sans-serif;text-align:center;padding:0 0 72px;border:1px solid rgba(0,0,0,.1);overflow:hidden;position:relative;z-index:1}
+.product-grid .product-image{position:relative;transition:all .3s ease 0s}
+.product-grid .product-image a{display:block}
+.product-grid .product-image img{width:100%;height:auto}
+.product-grid .pic-1{opacity:1;transition:all .3s ease-out 0s}
+.product-grid:hover .pic-1{opacity:1}
+.product-grid .pic-2{opacity:0;position:absolute;top:0;left:0;transition:all .3s ease-out 0s}
+.product-grid:hover .pic-2{opacity:1}
+.product-grid .social{width:150px;padding:0;margin:0;list-style:none;opacity:0;transform:translateY(-50%) translateX(-50%);position:absolute;top:60%;left:50%;z-index:1;transition:all .3s ease 0s}
+.product-grid:hover .social{opacity:1;top:50%}
+.product-grid .social li{display:inline-block}
+.product-grid .social li a{color:#fff;background-color:#333;font-size:16px;line-height:40px;text-align:center;height:40px;width:40px;margin:0 2px;display:block;position:relative;transition:all .3s ease-in-out}
+.product-grid .social li a:hover{color:#fff;background-color:#ef5777}
+.product-grid .social li a:after,.product-grid .social li a:before{content:attr(data-tip);color:#fff;background-color:#000;font-size:12px;letter-spacing:1px;line-height:20px;padding:1px 5px;white-space:nowrap;opacity:0;transform:translateX(-50%);position:absolute;left:50%;top:-30px}
+.product-grid .social li a:after{content:'';height:15px;width:15px;border-radius:0;transform:translateX(-50%) rotate(45deg);top:-20px;z-index:-1}
+.product-grid .social li a:hover:after,.product-grid .social li a:hover:before{opacity:1}
+.product-grid .product-discount-label,.product-grid .product-new-label{color:#fff;background-color:#ef5777;font-size:12px;text-transform:uppercase;padding:2px 7px;display:block;position:absolute;top:10px;left:0}
+.product-grid .product-discount-label{background-color:#333;left:auto;right:0}
+.product-grid .rating{color:#FFD200;font-size:12px;padding:12px 0 0;margin:0;list-style:none;position:relative;z-index:-1}
+.product-grid .rating li.disable{color:rgba(0,0,0,.2)}
+.product-grid .product-content{background-color:#fff;text-align:center;padding:12px 0;margin:0 auto;position:absolute;left:0;right:0;bottom:-27px;z-index:1;transition:all .3s}
+.product-grid:hover .product-content{bottom:0}
+.product-grid .title{font-size:13px;font-weight:400;letter-spacing:.5px;text-transform:capitalize;margin:0 0 10px;transition:all .3s ease 0s}
+.product-grid .title a{color:#828282}
+.product-grid .title a:hover,.product-grid:hover .title a{color:#ef5777}
+.product-grid .price{color:#333;font-size:17px;font-family:Montserrat,sans-serif;font-weight:700;letter-spacing:.6px;margin-bottom:8px;text-align:center;transition:all .3s}
+.product-grid .price span{color:#999;font-size:13px;font-weight:400;text-decoration:line-through;margin-left:3px;display:inline-block}
+.product-grid .add-to-cart{color:#000;font-size:13px;font-weight:600}
+@media only screen and (max-width:990px){.product-grid{margin-bottom:30px}
+}
+
+
+/********************* Shopping Demo-3 **********************/
+.product-grid3{font-family:Roboto,sans-serif;text-align:center;position:relative;z-index:1}
+.product-grid3:before{content:"";height:81%;width:100%;background:#fff;border:1px solid rgba(0,0,0,.1);opacity:0;position:absolute;top:0;left:0;z-index:-1;transition:all .5s ease 0s}
+.product-grid3:hover:before{opacity:1;height:100%}
+.product-grid3 .product-image3{position:relative}
+.product-grid3 .product-image3 a{display:block}
+.product-grid3 .product-image3 img{width:100%;height:auto}
+.product-grid3 .pic-1{opacity:1;transition:all .5s ease-out 0s}
+.product-grid3:hover .pic-1{opacity:0}
+.product-grid3 .pic-2{position:absolute;top:0;left:0;opacity:0;transition:all .5s ease-out 0s}
+.product-grid3:hover .pic-2{opacity:1}
+.product-grid3 .social{width:120px;padding:0;margin:0 auto;list-style:none;opacity:0;position:absolute;right:0;left:0;bottom:-23px;transform:scale(0);transition:all .3s ease 0s}
+.product-grid3:hover .social{opacity:1;transform:scale(1)}
+.product-grid3:hover .product-discount-label,.product-grid3:hover .product-new-label,.product-grid3:hover .title{opacity:0}
+.product-grid3 .social li{display:inline-block}
+.product-grid3 .social li a{color:#e67e22;background:#fff;font-size:18px;line-height:50px;width:50px;height:50px;border:1px solid rgba(0,0,0,.1);border-radius:50%;margin:0 2px;display:block;transition:all .3s ease 0s}
+.product-grid3 .social li a:hover{background:#e67e22;color:#fff}
+.product-grid3 .product-discount-label,.product-grid3 .product-new-label{background-color:#e67e22;color:#fff;font-size:17px;padding:2px 10px;position:absolute;right:10px;top:10px;transition:all .3s}
+.product-grid3 .product-content{z-index:-1;padding:15px;text-align:left}
+.product-grid3 .title{font-size:14px;text-transform:capitalize;margin:0 0 7px;transition:all .3s ease 0s}
+.product-grid3 .title a{color:#414141}
+.product-grid3 .price{color:#000;font-size:16px;letter-spacing:1px;font-weight:600;margin-right:2px;display:inline-block}
+.product-grid3 .price span{color:#909090;font-size:14px;font-weight:500;letter-spacing:0;text-decoration:line-through;text-align:left;display:inline-block;margin-top:-2px}
+.product-grid3 .rating{padding:0;margin:-22px 0 0;list-style:none;text-align:right;display:block}
+.product-grid3 .rating li{color:#ffd200;font-size:13px;display:inline-block}
+.product-grid3 .rating li.disable{color:#dcdcdc}
+@media only screen and (max-width:1200px){.product-grid3 .rating{margin:0}
+}
+@media only screen and (max-width:990px){.product-grid3{margin-bottom:30px}
+.product-grid3 .rating{margin:-22px 0 0}
+}
+@media only screen and (max-width:359px){.product-grid3 .rating{margin:0}
+}
+
+
+
+/********************* Shopping Demo-6 **********************/
+.product-grid6,.product-grid6 .product-image6{overflow:hidden}
+.product-grid6{font-family:'Open Sans',sans-serif;text-align:center;position:relative;transition:all .5s ease 0s}
+.product-grid6:hover{box-shadow:0 0 10px rgba(0,0,0,.3)}
+.product-grid6 .product-image6 a{display:block}
+.product-grid6 .product-image6 img{width:100%;height:auto;transition:all .5s ease 0s}
+.product-grid6:hover .product-image6 img{transform:scale(1.1)}
+.product-grid6 .product-content{padding:12px 12px 15px;transition:all .5s ease 0s}
+.product-grid6:hover .product-content{opacity:0}
+.product-grid6 .title{font-size:20px;font-weight:600;text-transform:capitalize;margin:0 0 10px;transition:all .3s ease 0s}
+.product-grid6 .title a{color:#000}
+.product-grid6 .title a:hover{color:#2e86de}
+.product-grid6 .price{font-size:18px;font-weight:600;color:#2e86de}
+.product-grid6 .price span{color:#999;font-size:15px;font-weight:400;text-decoration:line-through;margin-left:7px;display:inline-block}
+.product-grid6 .social{background-color:#fff;width:100%;padding:0;margin:0;list-style:none;opacity:0;transform:translateX(-50%);position:absolute;bottom:-50%;left:50%;z-index:1;transition:all .5s ease 0s}
+.product-grid6:hover .social{opacity:1;bottom:20px}
+.product-grid6 .social li{display:inline-block}
+.product-grid6 .social li a{color:#909090;font-size:16px;line-height:45px;text-align:center;height:45px;width:45px;margin:0 7px;border:1px solid #909090;border-radius:50px;display:block;position:relative;transition:all .3s ease-in-out}
+.product-grid6 .social li a:hover{color:#fff;background-color:#2e86de;width:80px}
+.product-grid6 .social li a:after,.product-grid6 .social li a:before{content:attr(data-tip);color:#fff;background-color:#2e86de;font-size:12px;letter-spacing:1px;line-height:20px;padding:1px 5px;border-radius:5px;white-space:nowrap;opacity:0;transform:translateX(-50%);position:absolute;left:50%;top:-30px}
+.product-grid6 .social li a:after{content:'';height:15px;width:15px;border-radius:0;transform:translateX(-50%) rotate(45deg);top:-20px;z-index:-1}
+.product-grid6 .social li a:hover:after,.product-grid6 .social li a:hover:before{opacity:1}
+@media only screen and (max-width:990px){.product-grid6{margin-bottom:30px}
+}
+
+/********************* Shopping Demo-7 **********************/
+.product-grid7{font-family:'Roboto Slab',serif;position:relative;z-index:1}
+.product-grid7 .product-image7{border:1px solid rgba(0,0,0,.1);overflow:hidden;perspective:1500px;position:relative;transition:all .3s ease 0s}
+.product-grid7 .product-image7 a{display:block}
+.product-grid7 .product-image7 img{width:100%;height:auto}
+.product-grid7 .pic-1{opacity:1;transition:all .5s ease-out 0s}
+.product-grid7 .pic-2{opacity:0;transform:rotateY(-90deg);position:absolute;top:0;left:0;transition:all .5s ease-out 0s}
+.product-grid7:hover .pic-2{opacity:1;transform:rotateY(0)}
+.product-grid7 .social{padding:0;margin:0;list-style:none;position:absolute;bottom:3px;left:-20%;z-index:1;transition:all .5s ease 0s}
+.product-grid7:hover .social{left:17px}
+.product-grid7 .social li a{color:#fff;background-color:#333;font-size:16px;line-height:40px;text-align:center;height:40px;width:40px;margin:15px 0;border-radius:50%;display:block;transition:all .5s ease-in-out}
+.product-grid7 .social li a:hover{color:#fff;background-color:#78e08f}
+.product-grid7 .product-new-label{color:#fff;background-color:#333;padding:5px 10px;border-radius:5px;display:block;position:absolute;top:10px;left:10px}
+.product-grid7 .product-content{text-align:center;padding:20px 0 0}
+.product-grid7 .title{font-size:15px;font-weight:600;text-transform:capitalize;margin:0 0 10px;transition:all .3s ease 0s}
+.product-grid7 .title a{color:#333}
+.product-grid7 .title a:hover{color:#78e08f}
+.product-grid7 .rating{color:#78e08f;font-size:12px;padding:0;margin:0 0 10px;list-style:none}
+.product-grid7 .price{color:#333;font-size:20px;font-family:Lora,serif;font-weight:700;margin-bottom:8px;text-align:center;transition:all .3s}
+.product-grid7 .price span{color:#999;font-size:14px;font-weight:700;text-decoration:line-through;margin-left:7px;display:inline-block}
+@media only screen and (max-width:990px){.product-grid7{margin-bottom:30px}
+}
+
+
+#hi{background-color: pink;}
+
+{% endblock %}
+{% block body %}
+{% load static %}
+<header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="hi">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+               <h4> <strong class="text-danger">SAB</strong></h4>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active ">
+                  <h4>  <a class="nav-link text-dark" href="{% url 'home' %}">Home
+                      <span class="sr-only">(current)</span>
+                    </a></h4>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'all' %}">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark h4" href="{% url 'contact' %}">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>search
+                </button>
+              
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><hr>
+
+<div class="container">
+    <h3 class="h3">Heavy Discounts!</h3>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="https://i2.wp.com/aboutmansmedia.s3.eu-west-2.amazonaws.com/wp-content/uploads/2020/02/28184641/Mens-jacket-trends-1.jpg">
+                        
+                        <img class="pic-2" src="https://www.onlyandsons.com/dw/image/v2/ABBT_PRD/on/demandware.static/-/Sites-pim-catalog/default/dw829e6c7d/pim-static/large/22017815_Chinchilla_003_ProductLarge.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fas fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fas fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fas fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">20%</span>
+                </div>
+                <ul class="rating">
+                    <li class="fas fa fa-star"></li>
+                    <li class="fas fa fa-star"></li>
+                    <li class="fas fa fa-star"></li>
+                    <li class="fas fa fa-star"></li>
+                    <li class="fas fa fa-star disable"></li>
+                </ul>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's jackets</a></h3>
+                    <div class="price">$16.00
+                        <span>$20.00</span>
+                    </div>
+                    <a class="add-to-cart" href="">+ Add To Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="https://assets.ajio.com/medias/sys_master/root/20210403/MoGA/60687431aeb269a9e3328140/bene_kleed_cream_floral_print_slim_fit_shirt.jpg">
+                        <img class="pic-2" src="https://i.pinimg.com/originals/6a/07/10/6a071012a7cea778e650b51c70de91d3.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">50%</span>
+                </div>
+                <ul class="rating">
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                </ul>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Shirts</a></h3>
+                    <div class="price">$5.00
+                        <span>$10.00</span>
+                    </div>
+                    <a class="add-to-cart" href="">+ Add To Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="https://stylesatlife.com/wp-content/uploads/2020/03/Fancy-Shirts-For-Mens.jpg">
+                        <img class="pic-2" src="https://i.pinimg.com/474x/50/59/f4/5059f4f6f1726772cf1b88204e55b826.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">50%</span>
+                </div>
+                <ul class="rating">
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                </ul>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Tshirts</a></h3>
+                    <div class="price">$5.00
+                        <span>$10.00</span>
+                    </div>
+                    <a class="add-to-cart" href="">+ Add To Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="https://cdn.shopify.com/s/files/1/0118/6706/2330/products/olive-green-mens-suits-for-groom-tuxedos_48d37107-bc48-4b93-8985-8de3ac1caee3_580x.jpg">
+                        <img class="pic-2" src="https://i.pinimg.com/originals/83/69/27/836927a29709d33f455c98de2139b367.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fas fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fas fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fas fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">50%</span>
+                </div>
+                <ul class="rating">
+                    <li class="fas fa fa-star"></li>
+                    <li class="fas fa fa-star"></li>
+                    <li class="fas fa fa-star"></li>
+                    <li class="fas fa fa-star"></li>
+                    <li class="fas fa fa-star"></li>
+                </ul>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's suits</a></h3>
+                    <div class="price">$5.00
+                        <span>$10.00</span>
+                    </div>
+                    <a class="add-to-cart" href="">+ Add To Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="container">
+    <h3 class="h3">Brand New One's </h3>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid3">
+                <div class="product-image3">
+                    <a href="#">
+                        <img class="pic-1" src="https://www.bagteshfashion.com/public/storage/uploads/images/product/product_image/thumb/MSU290.jpg">
+                        <img class="pic-2" src="https://cdn11.bigcommerce.com/s-pkla4xn3/images/stencil/1280x1280/products/13835/137283/1-Piece-2018-spring-new-men-s-suits-jacket-solid-color-Blazers-men-England-style-wind__73016.1544095092.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                    <div class="price">
+                        $63.50
+                        <span>$75.00</span>
+                    </div>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid3">
+                <div class="product-image3">
+                    <a href="#">
+                        <img class="pic-1" src="https://i.pinimg.com/736x/59/59/f8/5959f88c930b9dcd8631a1b85cfa02ad.jpg">
+                        <img class="pic-2" src="http://cdn.shopify.com/s/files/1/0271/7450/2538/products/product-image-922784768_1024x1024.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's pants</a></h3>
+                    <div class="price">
+                        $43.50
+                    </div>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid3">
+                <div class="product-image3">
+                    <a href="#">
+                        <img class="pic-1" src="https://ds393qgzrxwzn.cloudfront.net/resize/c500x500/cat1/img/images/0/bTMqokFMJQ.jpg">
+                        <img class="pic-2" src="https://i.pinimg.com/originals/50/26/4b/50264b022badff75035d8c8c71ba8f27.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Kurtis</a></h3>
+                    <div class="price">
+                        $63.50
+                        <span>$75.00</span>
+                    </div>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid3">
+                <div class="product-image3">
+                    <a href="#">
+                        <img class="pic-1" src="https://i.pinimg.com/564x/2c/27/bb/2c27bbc2d1ca50b928050397be74b64c.jpg">
+                        <img class="pic-2" src="https://i.pinimg.com/564x/0d/33/eb/0d33eb9550991bd4b1ab1185e84d8029.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Traditional</a></h3>
+                    <div class="price">
+                        $63.50
+                        <span>$75.00</span>
+                    </div>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <h3 class="h3">Hurry Up! Discounts For Limited Period</h3>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="https://images-na.ssl-images-amazon.com/images/I/71Z0-5X4BdL._UY550_.jpg">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                    <div class="price">$11.00
+                        <span>$14.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="https://images-na.ssl-images-amazon.com/images/I/61xQyNmF31L._AC_UX342_.jpg">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Jackets </a></h3>
+                    <div class="price">$8.00
+                        <span>$12.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="https://cdn.shopify.com/s/files/1/0040/2079/7551/products/Menswear_200ea01f-f557-4c41-8508-2bdbcd1f68a1_800x.jpg">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's jewellery</a></h3>
+                    <div class="price">$11.00
+                        <span>$14.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/11511506/2021/5/11/5936aaac-4fd2-406f-a225-99422f9884a11620704379371-Fossil-Men-Black-Privateer-Analogue-Watch-BQ2168-97216207043-1.jpg">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Watch</a></h3>
+                    <div class="price">$11.00
+                        <span>$14.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="container">
+    <h3 class="h3">Exclusive New! </h3>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid7">
+                <div class="product-image7">
+                    <a href="#">
+                        <img class="pic-1" src="https://m.media-amazon.com/images/I/41XV7ObNNYL.jpg">
+                        <img class="pic-2" src="https://assets.ajio.com/medias/sys_master/root/h25/hd0/11144244494366/-473Wx593H-460185190-brown-MODEL.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Shoes</a></h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                    </ul>
+                    <div class="price">$15.00
+                        <span>$20.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid7">
+                <div class="product-image7">
+                    <a href="#">
+                        <img class="pic-1" src="https://rukminim1.flixcart.com/image/332/398/k7z3afk0/watch/t/c/x/lcs-8188-lois-caron-original-imafq3k9ztzdkyhe.jpeg">
+                        <img class="pic-2" src="https://5.imimg.com/data5/TF/IK/MY-8623048/71cq0erkhhl-_uy445_-500x500.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Watches</a></h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                    </ul>
+                    <div class="price">$15.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid7">
+                <div class="product-image7">
+                    <a href="#">
+                        <img class="pic-1" src="https://assets.ajio.com/medias/sys_master/root/20210212/WMh1/602579b8f997dd5c40ee2250/fossil_gold_202764_full-rim_aviator_sunglasses.jpg">
+                        <img class="pic-2" src="https://cottonon.com/dw/image/v2/BBDS_PRD/on/demandware.static/-/Sites-catalog-master-men/default/dwa7c68c0c/363791/363791-02-2.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's SunGlasses</a></h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                    </ul>
+                    <div class="price">$15.00
+                        <span>$20.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid7">
+                <div class="product-image7">
+                    <a href="#">
+                        <img class="pic-1" src="https://www.bennevisfashion.com/upload/product/medium/1616138709Fawn-colored-Groom-Sherwani-1.jpg">
+                        <img class="pic-2" src="https://i.pinimg.com/736x/a6/81/a7/a681a7b3fc1093333060ad0b9857b1d8.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Wedding Wear</a></h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                    </ul> 
+                    <div class="price">$15.00
+                        <span>$20.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

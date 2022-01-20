@@ -1,0 +1,350 @@
+{% extends 'S_A_B/basic.html' %}
+{% block css %}
+@import url('https://fonts.googleapis.com/css?family=Passion+One|Montserrat:400,700');
+
+:root {
+  --columns: 3;
+}
+
+body{
+  position: relative;
+  background: #FDF4E0;
+  background-image: url("https://www.crushpixel.com/big-static14/preview4/abstract-cube-pattern-on-dark-1298120.jpg");
+  background-repeat: no-repeat; background-size: cover;
+   background-position: center center;
+    background-size: calc(1200%/(var(--columns)));
+}
+
+body::after{
+  display: block;
+  z-index: 5;
+  height: 34vw;
+  content: '';
+  background-color: #87C38F;
+  clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
+  -webkit-clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
+}
+
+ul::after{
+  grid-column:1/-1;
+  height: 5vw;
+  content: '';
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 34vw;
+  background-color: #87C38F;
+  clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+}
+h1{
+  color: #2C363F;
+  margin: 3vw;
+  transform: skewY(-18.6deg);
+  font-size: 13vw;
+  font-family: 'Passion One', cursive;
+}
+ul {
+  display:grid;
+  grid-template-columns: repeat(var(--columns),1fr);
+  transform-origin: top right;
+  transform: skewY(-18.6deg);
+  overflow: hidden;
+}
+
+li {
+  position: relative;
+  grid-column-end: span 2;
+  padding-top: 100%;
+  transform-origin: top left;
+  transform: skewY(18.6deg);
+}
+
+li:nth-child(2n){
+  grid-column-start:2;
+}
+
+li::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #467379;
+  z-index: -1;
+  clip-path: circle(31% at 50% 45%);
+  -webkit-clip-path: circle(31% at 50% 45%);
+}
+
+div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width:75%;
+  height:75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  transform: rotate(0) translate(0, 0);
+  transition-property: transform;
+  transition-duration: .3s;
+}
+
+div > h2 {
+  font: 400 calc(14vw/(var(--columns))) 'Passion One', cursive;
+  display: block;
+  padding: 4% 3% 3% 4%;
+  position: absolute;
+  background-color: #87C38F;
+  color: #2C363F;
+  transform: skewY(-18.6deg);
+  bottom: 0%;
+  left: 3%;
+  letter-spacing: 0.1em;
+  transition-property: opacity;
+  transition-duration: .3s;
+  z-index: 10;
+  opacity: 0;
+}
+
+div > p {
+  font: 700 calc(18vw/(var(--columns))) 'Montserrat', sans-serif;
+  display: block;
+  position: absolute;
+  top: -28%;
+  left: 50%;
+  color: #FDF4E0;
+  padding-right: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+  height: 42%;
+  letter-spacing: 0.1em;
+  transform: rotate(-90deg) translate(-40%, 0);
+  transition-property: transform;
+  transition-duration: .3s;
+}
+
+div > p::after{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: rgba(217,43,23,0.90);
+  z-index: -2;
+  clip-path: polygon(0% 50%, 50% 0%, 50% 15%, 100% 15%, 100% 85%, 50% 85%, 50% 100%);
+  -webkit-clip-path: polygon(0% 50%, 50% 0%, 50% 15%, 100% 15%, 100% 85%, 50% 85%, 50% 100%);
+}
+
+div:hover > p { 
+  transform: rotate(-30deg) translate(-20%, 90%);
+}
+
+div:hover > img { 
+  transform: rotate(15deg) translate(-10%, -10%) scale(1.2);
+}
+
+div:hover > h2 { 
+  opacity: 1;
+}
+
+
+@media (min-width:600px){
+  :root {
+    --columns: 5;
+  }
+  li:nth-child(2n){
+    grid-column-start:auto;
+  }
+  li:nth-child(4n-1){
+    grid-column-start:2;
+  }
+}
+@media (min-width:900px){
+  :root {
+    --columns: 7;
+  }
+  li:nth-child(4n-1){
+    grid-column-start:auto;
+  }
+  li:nth-child(6n-2){
+    grid-column-start:2;
+  }
+}
+@media (min-width:1200px){
+  :root {
+    --columns: 9;
+  }
+  li:nth-child(6n-2){
+    grid-column-start:auto;
+  }
+  li:nth-child(8n-3){
+    grid-column-start:2;
+  }
+}
+@media (min-width:1500px){
+  :root {
+    --columns: 11;
+  }
+  li:nth-child(8n-3){
+    grid-column-start:auto;
+  }
+  li:nth-child(10n-4){
+    grid-column-start:2;
+  }
+}
+@media (min-width:1800px){
+  :root {
+    --columns: 13;
+  }
+  li:nth-child(10n-4){
+    grid-column-start:auto;
+  }
+  li:nth-child(12n-5){
+    grid-column-start:2;
+  }
+
+}
+@media (min-width:2100px){
+  :root {
+    --columns: 15;
+  }
+  li:nth-child(12n-5){
+    grid-column-start:auto;
+  }
+  li:nth-child(14n-6){
+    grid-column-start:2;
+  }
+}
+
+{% endblock %}
+{% block body %}
+<header><h1>BIKES! BIKES!</h1></header>
+<ul>
+  <li>
+    <div>
+      <h2>YAMAHA YZF R15 V3</h2>
+      <p class="price">$998</p>
+      <img src='https://i0.wp.com/motorallyreview.com/wp-content/uploads/2017/10/2019-BMW-G-310-R-Review.jpg' alt='' />
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>KTM RC 200</h2>
+      <p class="price">$1090</p>
+      <img src='https://danhgiaxe.net/wp-content/uploads/2018/01/bmw-g310r-2019-1.jpg' alt='' />
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>YAMAHA MT 15</h2>
+       <p class="price">$975</p>
+      <img src='https://imgd.aeplcdn.com/640x348/n/cw/ec/46756/yamaha-mt-15-front-right-three-quarter1.jpeg?wm=2&q=75' alt='' />
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>KTM RC 200</h2>
+      <p class="price">$1049</p>
+      <img src='https://imgd.aeplcdn.com/600x337/bw/ec/39757/BikeWale-TrackDay-BMW-G310R-155956.jpg' alt='' />
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>ROYAL ENFIELD CLASSIC</h2>
+      <p class="price">$I109</p>
+      <img src='https://www.cartoq.com/wp-content/uploads/2017/06/Avenger-Autologue-Bruise-Kit-1.jpg' alt='' />
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>ROYAL ENFIELD BULLET 350</h2>
+      <p class="price">$990</p>
+      <img src='https://rideofy.com/wp-content/uploads/2020/06/home-slider_10.jpg' alt='' />
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>YAMAHAHA R15</h2>
+      <p class="price">$1175</p>
+      <img src='https://i.ytimg.com/vi/Sypsay8JKU4/maxresdefault.jpg' alt='' />
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>KTM 125 DUKE</h2>
+      <p class="price">$985</p>
+      <img src='https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/cbr650r_660_copy_080320044751.jpg' alt='' />
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>HONDA HNESS CB350</h2>
+      <p class="price">$1090</p>
+      <img src='https://cdn.wallpapersafari.com/1/21/m09FgH.jpg' alt='' />
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>TVS APACHE RTR 160 4V</h2>
+      <p class="price">$999</p>
+      <img src='https://images.livemint.com/img/2019/10/08/600x338/2019-10-07T102129Z_1_LYNXMPEF960L5_RTROPTP_3_HARLEY-DAVIDSON-ELECTRICBIKE_1570505064296_1570505080774.JPG' alt='' />
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>TVS JUPITER</h2>
+      <p class="price">$1099</p>
+      <img src='https://bd.gaadicdn.com/processedimages/tvs/tvs-akula-310/371X252/tvs-akula-3105e873ea2b067e.jpg' alt='' />
+      
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>ROYAL ENFIELD METEOR 350</h2>
+      <p class="price">$1109</p>
+      <img src='https://bd.gaadicdn.com/processedimages/honda/honda-cruiser/371X252/honda-cruiser606ab54178683.jpg' alt='' />
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>JAWA</h2>
+       <p class="price">$1110</p>
+      <img src='https://bd.gaadicdn.com/processedimages/honda/cb-350-x-scrambler/source/cb-350-x-scrambler606d375d96454.jpg' alt='' />
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>HARLEY DAVISON ELECTRAGLIDE</h2>
+      <p class="price">$1340</p>
+      <img src='https://im.rediff.com/getahead/2016/jun/10-most-expensive-indian-bikes-1.jpg' alt='' />
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>BMW R 1250 GS ADVENTURE</h2>
+      <p class="price">$1321</p>
+      <img src='https://im.rediff.com/getahead/2016/jun/10-most-expensive-indian-bikes-4.jpg' alt='' />
+    </div>
+  </li>
+  
+  </ul>
+{% endblock %}
